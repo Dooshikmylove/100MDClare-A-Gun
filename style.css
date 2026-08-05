@@ -1,0 +1,568 @@
+/* =======================================================
+   100 MEXICANOS DIJERON
+   CLARE A. GUNN
+   Autor: ChatGPT
+======================================================= */
+
+/* ========= RESET ========= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:
+    linear-gradient(135deg,#001b4d,#003d99,#001b4d);
+
+    background-size:400% 400%;
+
+    animation:fondo 15s ease infinite;
+
+    min-height:100vh;
+
+    color:white;
+
+    overflow:hidden;
+
+}
+
+/* ========= ANIMACIÓN FONDO ========= */
+
+@keyframes fondo{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+/* ========= PANTALLA DE CARGA ========= */
+
+#loader{
+
+position:fixed;
+
+inset:0;
+
+background:#00113a;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:9999;
+
+}
+
+.loader-logo{
+
+text-align:center;
+
+animation:zoom 2s infinite;
+
+}
+
+.loader-logo h1{
+
+font-size:90px;
+
+color:#FFD700;
+
+}
+
+.loader-logo h2{
+
+font-size:45px;
+
+}
+
+.loader-logo h3{
+
+font-size:55px;
+
+color:#FFD700;
+
+}
+
+@keyframes zoom{
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+}
+
+/* ========= MENÚ ========= */
+
+#menu{
+
+width:100%;
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.menu-card{
+
+width:700px;
+
+padding:60px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+box-shadow:
+
+0 0 40px rgba(0,0,0,.35);
+
+text-align:center;
+
+}
+
+.menu-card h1{
+
+font-size:52px;
+
+color:#FFD700;
+
+margin-bottom:20px;
+
+}
+
+.menu-card p{
+
+font-size:22px;
+
+margin-bottom:10px;
+
+}
+
+.menu-card h2{
+
+font-size:40px;
+
+margin-bottom:45px;
+
+}
+
+/* ========= BOTONES ========= */
+
+button{
+
+cursor:pointer;
+
+border:none;
+
+outline:none;
+
+font-family:inherit;
+
+transition:.35s;
+
+}
+
+.menu-card button{
+
+width:100%;
+
+padding:20px;
+
+margin-top:18px;
+
+border-radius:50px;
+
+font-size:23px;
+
+font-weight:bold;
+
+background:#FFD700;
+
+color:#00113a;
+
+}
+
+.menu-card button:hover{
+
+transform:translateY(-4px);
+
+background:#FFE066;
+
+box-shadow:
+
+0 10px 25px rgba(255,215,0,.45);
+
+}
+
+/* ========= MODAL ========= */
+
+#modal{
+
+position:fixed;
+
+inset:0;
+
+background:rgba(0,0,0,.65);
+
+display:none;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:500;
+
+}
+
+.modal-contenido{
+
+width:650px;
+
+padding:40px;
+
+background:white;
+
+color:#333;
+
+border-radius:20px;
+
+}
+
+.modal-contenido h2{
+
+margin-bottom:25px;
+
+}
+
+.modal-contenido ul{
+
+padding-left:25px;
+
+line-height:2;
+
+margin-bottom:25px;
+
+}
+
+.modal-contenido button{
+
+background:#003D99;
+
+color:white;
+
+padding:14px 40px;
+
+border-radius:30px;
+
+}
+
+/* ========= JUEGO ========= */
+
+#juego{
+
+display:none;
+
+padding:45px;
+
+height:100vh;
+
+}
+
+header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:35px;
+
+}
+
+#puntaje,
+#temporizador,
+#contador{
+
+background:rgba(255,255,255,.12);
+
+padding:18px 28px;
+
+border-radius:20px;
+
+font-size:22px;
+
+font-weight:bold;
+
+box-shadow:0 0 20px rgba(255,255,255,.1);
+
+}
+
+/* ========= PREGUNTA ========= */
+
+#contenedorPregunta{
+
+padding:40px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(15px);
+
+box-shadow:0 0 25px rgba(0,0,0,.3);
+
+margin-bottom:40px;
+
+min-height:180px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+}
+
+#pregunta{
+
+font-size:36px;
+
+line-height:1.5;
+
+}
+
+/* ========= RESPUESTAS ========= */
+
+#contenedorRespuestas{
+
+display:grid;
+
+grid-template-columns:1fr;
+
+gap:22px;
+
+}
+
+.respuesta{
+
+padding:22px;
+
+font-size:23px;
+
+border-radius:20px;
+
+background:#FFD54F;
+
+color:#222;
+
+font-weight:bold;
+
+text-align:left;
+
+}
+
+.respuesta:hover{
+
+transform:scale(1.03);
+
+box-shadow:0 10px 25px rgba(255,213,79,.45);
+
+}
+
+/* ========= BOTÓN SIGUIENTE ========= */
+
+#acciones{
+
+margin-top:35px;
+
+text-align:center;
+
+}
+
+#btnSiguiente{
+
+padding:18px 60px;
+
+font-size:24px;
+
+border-radius:40px;
+
+background:#FFD700;
+
+display:none;
+
+}
+
+/* ========= PANTALLA FINAL ========= */
+
+#pantallaFinal{
+
+display:none;
+
+height:100vh;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+#pantallaFinal h1{
+
+font-size:90px;
+
+}
+
+#pantallaFinal h2{
+
+font-size:48px;
+
+margin:20px 0;
+
+}
+
+#resultado{
+
+font-size:38px;
+
+margin-bottom:25px;
+
+}
+
+#medalla{
+
+font-size:80px;
+
+margin-bottom:40px;
+
+}
+
+#reiniciar{
+
+padding:18px 55px;
+
+font-size:24px;
+
+border-radius:40px;
+
+background:#FFD700;
+
+}
+
+/* ========= UTILIDADES ========= */
+
+.oculto{
+
+display:none !important;
+
+}
+
+.visible{
+
+display:flex !important;
+
+}
+
+/* ========= RESPONSIVE ========= */
+
+@media(max-width:900px){
+
+.menu-card{
+
+width:92%;
+
+padding:35px;
+
+}
+
+.menu-card h1{
+
+font-size:36px;
+
+}
+
+.menu-card h2{
+
+font-size:28px;
+
+}
+
+#pregunta{
+
+font-size:27px;
+
+}
+
+header{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+body{
+
+overflow:auto;
+
+}
+
+#juego{
+
+padding:20px;
+
+}
+
+#pregunta{
+
+font-size:22px;
+
+}
+
+.respuesta{
+
+font-size:18px;
+
+}
+
+}
