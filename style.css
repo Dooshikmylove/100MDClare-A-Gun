@@ -1816,6 +1816,36 @@ font-size:2rem;
 
 }
 
+   #confeti span{
+
+animation-name:caer;
+
+animation-fill-mode:forwards;
+
+}
+
+
+
+@keyframes caer{
+
+from{
+
+transform:translateY(0)
+rotate(0deg);
+
+}
+
+
+
+to{
+
+transform:
+translateY(110vh)
+rotate(720deg);
+
+}
+
+}
 
 
 }
