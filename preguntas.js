@@ -1,203 +1,489 @@
-/* =======================================================
-   100 MEXICANOS DIJERON
-   CLARE A. GUNN
+/*=========================================
+     100 POTROMOCHILEROS DIJERON
 
-   Banco de preguntas
-======================================================= */
+     BANCO DE PREGUNTAS
+
+     Tema:
+     Oferta y Demanda en el modelo
+     turístico de Clare A. Gunn
+
+=========================================*/
 
 
 const preguntas = [
 
+
 {
-    pregunta:
-    "Le preguntamos a 100 estudiantes... ¿Cuál es considerado 'el motor' o la razón principal por la que un turista decide viajar según el modelo de Clare A. Gunn?",
 
-    respuestas:[
-        "Las Atracciones (Naturales, culturales o recreativas)",
-        "La agencia de viajes donde compró el boleto",
-        "El tipo de maleta que lleva para el viaje"
-    ],
+pregunta:
 
-    correcta:0,
+"Le preguntamos a 100 estudiantes de turismo... ¿Cuál elemento representa el punto de partida de la demanda turística dentro del modelo de Clare A. Gunn?",
 
-    puntos:52
+
+opciones:[
+
+"Los turistas con sus motivaciones, necesidades y deseos de viaje",
+
+"Las empresas que administran los atractivos del destino",
+
+"Los sistemas de transporte que conectan las regiones turísticas",
+
+"Los organismos encargados de promocionar un destino",
+
+"Las instalaciones construidas para recibir visitantes",
+
+"Los recursos económicos destinados al turismo"
+
+],
+
+
+correcta:0,
+
+puntos:52
+
 },
 
 
+
 {
-    pregunta:
-    "Le preguntamos a 100 profesores... ¿Cuáles son los 5 componentes del sistema turístico de Clare A. Gunn?",
 
-    respuestas:[
-        "Hoteles, Aviones, Playas, Souvenirs y Guías de turistas",
-        "Atracciones, Servicios de apoyo, Transporte, Información/Promoción y Población/Demanda",
-        "Pasaporte, Visa, Tarjeta de crédito, Clima y Redes sociales"
-    ],
+pregunta:
 
-    correcta:1,
+"Le preguntamos a 100 profesores... ¿Cómo se relacionan la oferta y la demanda dentro del sistema turístico de Gunn?",
 
-    puntos:48
+
+opciones:[
+
+"La oferta determina completamente el comportamiento del turista",
+
+"La demanda turística busca satisfacer sus necesidades mediante la oferta disponible",
+
+"Ambas funcionan de manera independiente sin influirse",
+
+"La demanda solamente aparece después de construir infraestructura",
+
+"La oferta turística elimina la necesidad de estudiar al visitante",
+
+"El transporte es el único vínculo entre ambas"
+
+],
+
+
+correcta:1,
+
+puntos:48
+
 },
 
 
+
 {
-    pregunta:
-    "Le preguntamos a 100 académicos... ¿Cómo define Clare A. Gunn al Producto Turístico?",
 
-    respuestas:[
-        "Un folleto impreso con descuentos para tours",
-        "Una artesanía o souvenir típico que compras en el destino",
-        "Una experiencia integral que combina atracciones, servicios y transporte"
-    ],
+pregunta:
 
-    correcta:2,
+"Le preguntamos a 100 investigadores... ¿Qué representa la oferta turística dentro del modelo de Clare A. Gunn?",
 
-    puntos:45
+
+opciones:[
+
+"El conjunto de productos, servicios y elementos que permiten la experiencia turística",
+
+"Únicamente la cantidad de hoteles disponibles",
+
+"Los turistas que llegan durante una temporada",
+
+"Las campañas publicitarias realizadas por agencias",
+
+"El dinero que los visitantes gastan durante el viaje",
+
+"Las opiniones publicadas en redes sociales"
+
+],
+
+
+correcta:0,
+
+puntos:50
+
 },
 
 
+
 {
-    pregunta:
-    "Le preguntamos a 100 viajeros... En el modelo de oferta y demanda, ¿quién representa la DEMANDA turística?",
 
-    respuestas:[
-        "Los turistas y sus necesidades/motivaciones de viaje",
-        "La cantidad de cuartos de hotel disponibles en la playa",
-        "El menú de un restaurante de comida típica"
-    ],
+pregunta:
 
-    correcta:0,
+"Le preguntamos a 100 planificadores turísticos... ¿Cuál es la función principal de una planificación basada en oferta y demanda?",
 
-    puntos:50
+
+opciones:[
+
+"Aumentar visitantes sin considerar límites del destino",
+
+"Equilibrar las necesidades del visitante con la capacidad del territorio",
+
+"Eliminar completamente la participación de la comunidad local",
+
+"Construir infraestructura turística en cualquier espacio disponible",
+
+"Reducir la variedad de experiencias ofrecidas",
+
+"Concentrar todos los servicios en un solo atractivo"
+
+],
+
+
+correcta:1,
+
+puntos:51
+
 },
 
 
+
 {
-    pregunta:
-    "Le preguntamos a 100 investigadores... ¿Con qué importante académico y coautor colaboró Gunn para expandir los estudios de economía del turismo?",
 
-    respuestas:[
-        "Stephen L. J. Smith",
-        "Karl Marx",
-        "Christopher Columbus"
-    ],
+pregunta:
 
-    correcta:0,
+"Le preguntamos a 100 especialistas... ¿Qué ocurre cuando existe una alta demanda turística pero poca capacidad de oferta?",
 
-    puntos:42
+
+opciones:[
+
+"El destino puede presentar saturación y problemas de funcionamiento",
+
+"Los visitantes dejan de necesitar servicios turísticos",
+
+"El atractivo aumenta automáticamente su capacidad",
+
+"La demanda desaparece por completo",
+
+"Los servicios turísticos dejan de ser necesarios",
+
+"El transporte sustituye todos los componentes restantes"
+
+],
+
+
+correcta:0,
+
+puntos:55
+
+}
+
+];
+
+// ========================================
+// PREGUNTAS 6 - 15
+// ========================================
+
+
+{
+
+pregunta:
+
+"Le preguntamos a 100 especialistas en turismo... ¿Cuál de los siguientes elementos pertenece al sistema turístico propuesto por Clare A. Gunn?",
+
+
+opciones:[
+
+"Atracciones, transporte, servicios de apoyo e información",
+
+"Únicamente hoteles, restaurantes y agencias de viajes",
+
+"Solamente recursos naturales protegidos",
+
+"Las redes sociales utilizadas por los visitantes",
+
+"Los documentos oficiales para ingresar a un país",
+
+"Los ingresos económicos generados por el destino"
+
+],
+
+correcta:0,
+
+puntos:46
+
 },
 
 
+
 {
-    pregunta:
-    "Le preguntamos a 100 administradores... ¿Qué pasa en el sistema de Clare A. Gunn si la red de transporte hacia un destino colapsa?",
 
-    respuestas:[
-        "Las atracciones ganan más valor automáticamente",
-        "El sistema turístico se desequilibra porque la demanda no puede llegar a la oferta",
-        "Los hoteles regalan las habitaciones para compensar"
-    ],
+pregunta:
 
-    correcta:1,
+"Le preguntamos a 100 investigadores... ¿Por qué las atracciones son consideradas un elemento fundamental dentro del modelo de Gunn?",
 
-    puntos:55
+
+opciones:[
+
+"Porque generan el motivo principal que impulsa el desplazamiento turístico",
+
+"Porque sustituyen todos los servicios complementarios del destino",
+
+"Porque determinan exclusivamente el precio del viaje",
+
+"Porque eliminan la necesidad del transporte turístico",
+
+"Porque funcionan solamente cuando existen hoteles",
+
+"Porque pertenecen únicamente al sector privado"
+
+],
+
+correcta:0,
+
+puntos:52
+
 },
 
 
+
 {
-    pregunta:
-    "Le preguntamos a 100 planificadores... ¿Cuál es la función principal del componente Información y Promoción en el sistema de Gunn?",
 
-    respuestas:[
-        "Conectar a la demanda (turistas) con la oferta (destino)",
-        "Cobrarle impuestos a los hoteles por tener páginas web",
-        "Obligar a los turistas a tomarse fotos en los monumentos"
-    ],
+pregunta:
 
-    correcta:0,
+"Le preguntamos a 100 administradores de destinos... ¿Qué función cumple el transporte dentro del sistema turístico de Clare A. Gunn?",
 
-    puntos:40
+
+opciones:[
+
+"Permite la conexión entre los turistas y los espacios donde se desarrolla la experiencia",
+
+"Define la identidad cultural completa del destino",
+
+"Reemplaza las actividades recreativas del visitante",
+
+"Determina las preferencias personales de cada turista",
+
+"Controla únicamente la publicidad del destino",
+
+"Elimina la importancia de las atracciones"
+
+],
+
+correcta:0,
+
+puntos:44
+
 },
 
 
+
 {
-    pregunta:
-    "Le preguntamos a 100 economistas del turismo... ¿Qué busca lograr la planificación turística según Clare A. Gunn?",
 
-    respuestas:[
-        "Construir hoteles en todas las áreas naturales sin restricción",
-        "Un equilibrio sostenible entre el desarrollo de la oferta y la protección del entorno",
-        "Que solo las personas millonarias puedan viajar"
-    ],
+pregunta:
 
-    correcta:1,
+"Le preguntamos a 100 estudiantes de turismo... ¿Cuál es la relación entre información/promoción y la demanda turística?",
 
-    puntos:51
+
+opciones:[
+
+"Facilita que los visitantes conozcan y seleccionen las opciones disponibles del destino",
+
+"Reduce la necesidad de crear productos turísticos",
+
+"Evita que los turistas comparen diferentes destinos",
+
+"Determina la cantidad exacta de visitantes futuros",
+
+"Sustituye los servicios de apoyo del destino",
+
+"Elimina la participación de la comunidad local"
+
+],
+
+correcta:0,
+
+puntos:49
+
 },
 
 
+
 {
-    pregunta:
-    "Le preguntamos a 100 guías turísticos... Según el modelo de Gunn, ¿qué son los Servicios de Apoyo y Facilidades?",
 
-    respuestas:[
-        "El internet Wi-Fi de los aeropuertos únicamente",
-        "Hoteles, restaurantes, comercios y servicios que atienden al turista durante su estancia",
-        "Los permisos gubernamentales para abrir un negocio"
-    ],
+pregunta:
 
-    correcta:1,
+"Le preguntamos a 100 planificadores turísticos... ¿Qué busca evitar Clare A. Gunn mediante una correcta planificación turística?",
 
-    puntos:44
+
+opciones:[
+
+"Un crecimiento desordenado que afecte el equilibrio del destino",
+
+"La existencia de atractivos culturales y naturales",
+
+"La participación de turistas nacionales",
+
+"La creación de nuevos servicios turísticos",
+
+"El uso de herramientas de promoción",
+
+"La cooperación entre actores turísticos"
+
+],
+
+correcta:0,
+
+puntos:53
+
 },
 
 
+
 {
-    pregunta:
-    "Le preguntamos a 100 analistas... ¿Por qué el modelo de Clare A. Gunn se considera un sistema?",
 
-    respuestas:[
-        "Porque se ejecuta únicamente a través de computadoras y software",
-        "Porque si uno de sus componentes falla, afecta a todo el funcionamiento del destino",
-        "Porque solo funciona en países desarrollados"
-    ],
+pregunta:
 
-    correcta:1,
+"Le preguntamos a 100 académicos... ¿Cómo se entiende el producto turístico dentro del enfoque de Gunn?",
 
-    puntos:49
+
+opciones:[
+
+"Como una combinación de elementos que generan una experiencia completa para el visitante",
+
+"Como un objeto físico vendido en una tienda turística",
+
+"Como un documento utilizado para promocionar destinos",
+
+"Como una instalación construida exclusivamente para turistas",
+
+"Como una estrategia económica independiente",
+
+"Como una tarifa establecida por hoteles"
+
+],
+
+correcta:0,
+
+puntos:45
+
 },
 
 
+
 {
-    pregunta:
-    "Le preguntamos a 100 autores de turismo... ¿Con qué famoso teórico del Ciclo de Vida del Destino Turístico compartió debates e ideas académicas Clare A. Gunn?",
 
-    respuestas:[
-        "Richard W. Butler",
-        "Isaac Newton",
-        "Sigmund Freud"
-    ],
+pregunta:
 
-    correcta:0,
+"Le preguntamos a 100 investigadores... ¿Qué característica distingue al modelo turístico de Clare A. Gunn?",
 
-    puntos:46
+
+opciones:[
+
+"Considera al turismo como un sistema donde los componentes están relacionados",
+
+"Analiza únicamente la cantidad de visitantes",
+
+"Se enfoca solamente en la construcción de infraestructura",
+
+"Elimina la importancia de la demanda",
+
+"Considera únicamente destinos internacionales",
+
+"Estudia solamente los precios turísticos"
+
+],
+
+correcta:0,
+
+puntos:50
+
 },
 
 
+
 {
-    pregunta:
-    "Le preguntamos a 100 geógrafos... ¿En qué prestigiosa universidad estadounidense desarrolló gran parte de su carrera y colaboraciones Clare A. Gunn?",
 
-    respuestas:[
-        "Universidad de Harvard",
-        "Texas A&M University",
-        "Universidad de Oxford"
-    ],
+pregunta:
 
-    correcta:1,
+"Le preguntamos a 100 expertos en desarrollo turístico... ¿Qué ocurre si uno de los componentes del sistema turístico presenta deficiencias?",
 
-    puntos:47
+
+opciones:[
+
+"Puede afectar el funcionamiento general de todo el sistema turístico",
+
+"Los demás componentes funcionan siempre sin modificaciones",
+
+"La demanda aumenta automáticamente",
+
+"El destino deja de necesitar planificación",
+
+"El transporte deja de tener importancia",
+
+"Las atracciones se vuelven independientes"
+
+],
+
+correcta:0,
+
+puntos:55
+
+},
+
+
+
+{
+
+pregunta:
+
+"Le preguntamos a 100 profesores universitarios... ¿Qué académico desarrolló un modelo relacionado con la evolución de los destinos turísticos y tuvo debates académicos con Gunn?",
+
+
+opciones:[
+
+"Richard W. Butler",
+
+"Stephen L. J. Smith",
+
+"Tarek A. Neyani",
+
+"J. B. Jackson",
+
+"Neil S. Chernoff",
+
+"David Ricardo"
+
+],
+
+correcta:0,
+
+puntos:47
+
+},
+
+
+
+{
+
+pregunta:
+
+"Le preguntamos a 100 estudiantes de turismo... ¿En qué institución desarrolló gran parte de su carrera académica Clare A. Gunn?",
+
+
+opciones:[
+
+"Texas A&M University",
+
+"Universidad de Harvard",
+
+"Universidad de Oxford",
+
+"Universidad de Cambridge",
+
+"Massachusetts Institute of Technology",
+
+"Universidad de Stanford"
+
+],
+
+correcta:0,
+
+puntos:51
+
 }
 
 
-];
