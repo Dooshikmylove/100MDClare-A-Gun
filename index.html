@@ -8,16 +8,9 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>
-        100 Potromochileros Dijeron
-    </title>
+    <title>100 Potromochileros Dijeron</title>
 
-    <!-- CSS -->
-
-    <link rel="stylesheet"
-          href="style.css">
-
-    <!-- Fuente -->
+    <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
@@ -26,501 +19,645 @@
           href="https://fonts.gstatic.com"
           crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800;900&display=swap"
           rel="stylesheet">
 
 </head>
 
 <body>
 
-<!-- ==========================
-        PANTALLA DE CARGA
-=========================== -->
+<!-- ===================================================
+                PANTALLA DE INICIO
+=================================================== -->
 
-<div id="loader">
+<section id="pantallaInicio"
+         class="pantalla">
 
-    <div class="loader-contenido">
+    <div class="fondoInicio">
 
-        <h1>
+        <!-- Figuras decorativas -->
 
-            <span>100</span>
+        <div class="figura rosa"></div>
 
-            <span>POTROMOCHILEROS</span>
+        <div class="figura azul"></div>
 
-            <span>DIJERON</span>
+        <div class="figura amarilla"></div>
 
-        </h1>
+        <div class="figura verde"></div>
+
+        <!-- Logo -->
+
+        <div class="logoPrincipal">
+
+            <h1>
+
+                <span class="numero">
+
+                    100
+
+                </span>
+
+                <span class="potro">
+
+                    POTROMOCHILEROS
+
+                </span>
+
+                <span class="dijeron">
+
+                    DIJERON
+
+                </span>
+
+            </h1>
+
+        </div>
+
+        <!-- Menú -->
+
+        <nav class="menuPrincipal">
+
+            <button id="btnJugar">
+
+                JUGAR
+
+            </button>
+
+            <button id="btnInstrucciones">
+
+                INSTRUCCIONES
+
+            </button>
+
+            <button id="btnConfiguracion">
+
+                CONFIGURACIÓN
+
+            </button>
+
+            <button id="btnCreditos">
+
+                CRÉDITOS
+
+            </button>
+
+        </nav>
+
+    </div>
+
+</section>
+
+<!-- ===================================================
+            PANTALLA INSTRUCCIONES
+=================================================== -->
+
+<section id="pantallaInstrucciones"
+         class="pantalla oculto">
+
+    <div class="ventana">
+
+        <h2>
+
+            ¿CÓMO JUGAR?
+
+        </h2>
+
+        <ul>
+
+            <li>
+                El moderador selecciona el equipo que responderá.
+            </li>
+
+            <li>
+                Cada pregunta tiene seis opciones.
+            </li>
+
+            <li>
+                Si el equipo responde correctamente gana los puntos.
+            </li>
+
+            <li>
+                Si falla, pierde puntos y el turno pasa al otro equipo.
+            </li>
+
+            <li>
+                Cuando termine el tiempo también cambia el turno.
+            </li>
+
+            <li>
+                Gana el equipo con mayor puntuación.
+            </li>
+
+        </ul>
+
+        <button id="volverInicio1">
+
+            VOLVER
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ===================================================
+            CONFIGURACIÓN
+=================================================== -->
+
+<section id="pantallaConfiguracion"
+         class="pantalla oculto">
+
+    <div class="ventana">
+
+        <h2>
+
+            CONFIGURACIÓN
+
+        </h2>
+
+        <div class="opcion">
+
+            <label>
+
+                Música
+
+            </label>
+
+            <input
+                type="checkbox"
+                id="activarMusica"
+                checked>
+
+        </div>
+
+        <div class="opcion">
+
+            <label>
+
+                Sonidos
+
+            </label>
+
+            <input
+                type="checkbox"
+                id="activarSonidos"
+                checked>
+
+        </div>
+
+        <button id="volverInicio2">
+
+            VOLVER
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ===================================================
+                CRÉDITOS
+=================================================== -->
+
+<section id="pantallaCreditos"
+         class="pantalla oculto">
+
+    <div class="ventana">
+
+        <h2>
+
+            CRÉDITOS
+
+        </h2>
 
         <p>
 
-            Universidad Autónoma del Estado de México
+            100 Potromochileros Dijeron
 
         </p>
 
-        <div class="loader-luces">
+        <p>
 
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+            Proyecto desarrollado para la carrera de Gestión e Innovación Turística.
+
+        </p>
+
+        <p>
+
+            Universidad Autónoma del Estado de México.
+
+        </p>
+
+        <button id="volverInicio3">
+
+            VOLVER
+
+        </button>
+
+    </div>
+
+</section>
+
+
+    <!-- ===================================================
+                SELECCIÓN DE EQUIPO
+=================================================== -->
+
+<section id="pantallaEquipos"
+         class="pantalla oculto">
+
+    <div class="contenedorEquipos">
+
+        <h2>
+
+            SELECCIONA EL EQUIPO
+
+        </h2>
+
+        <div class="equipos">
+
+            <button id="equipoAzul"
+                    class="btnEquipo azul">
+
+                🔵
+
+                <span>
+
+                    EQUIPO AZUL
+
+                </span>
+
+            </button>
+
+            <button id="equipoRojo"
+                    class="btnEquipo rojo">
+
+                🔴
+
+                <span>
+
+                    EQUIPO ROJO
+
+                </span>
+
+            </button>
 
         </div>
 
     </div>
 
-</div>
-
-
-<!-- ==========================
-        MENÚ PRINCIPAL
-=========================== -->
-
-<section id="inicio">
-
-    <div class="fondo"></div>
-
-    <div class="logoPrincipal">
-
-        <h2>
-
-            100
-
-        </h2>
-
-        <h1>
-
-            POTROMOCHILEROS
-
-        </h1>
-
-        <h3>
-
-            DIJERON
-
-        </h3>
-
-        <p>
-
-            Oferta y Demanda en el Modelo Turístico de Clare A. Gunn
-
-        </p>
-
-    </div>
-
-    <div class="menuPrincipal">
-
-        <button id="btnJugar">
-
-            ▶ JUGAR
-
-        </button>
-
-        <button id="btnInstrucciones">
-
-            📖 INSTRUCCIONES
-
-        </button>
-
-        <button id="btnConfiguracion">
-
-            ⚙ CONFIGURACIÓN
-
-        </button>
-
-        <button id="btnCreditos">
-
-            🏆 CRÉDITOS
-
-        </button>
-
-    </div>
-
 </section>
 
+<!-- ===================================================
+                PANTALLA DEL JUEGO
+=================================================== -->
 
-<!-- ==========================
-      SELECCIÓN DE EQUIPOS
-=========================== -->
+<section id="pantallaJuego"
+         class="pantalla oculto">
 
-<section
-id="seleccionEquipos"
-class="pantallaOculta">
+<div class="marcoExterior">
 
-<h2>
+<!-- ==========================================
+        ÓVALO SUPERIOR
+========================================== -->
 
-¿Quién responderá primero?
+<div class="ovaloSuperior">
 
-</h2>
+<span id="numeroPregunta">
 
-<p>
-
-Selecciona el equipo inicial
-
-</p>
-
-<div class="equipos">
-
-<button
-id="equipoAzul">
-
-🔵
-
-<h3>
-
-Equipo Azul
-
-</h3>
-
-<span>
-
-0 puntos
+PREGUNTA 1
 
 </span>
 
-</button>
-
-
-<div class="vs">
-
-VS
-
 </div>
 
+<!-- ==========================================
+            PANEL PRINCIPAL
+========================================== -->
 
-<button
-id="equipoRojo">
+<div class="panelPrincipal">
 
-🔴
+<!-- ==========================================
+            BARRA SUPERIOR
+========================================== -->
+
+<div class="barraSuperior">
+
+<div class="marcador azul">
 
 <h3>
 
-Equipo Rojo
+EQUIPO AZUL
 
 </h3>
 
-<span>
+<span id="puntajeAzul">
 
-0 puntos
+0
 
 </span>
-
-</button>
-
-</div>
-
-</section>
-
-
-<!-- ==========================
-      PANTALLA DEL JUEGO
-=========================== -->
-
-<section
-id="juego"
-class="pantallaOculta">
-
-<header>
-
-<div class="tituloJuego">
-
-<h1>
-
-100 POTROMOCHILEROS DIJERON
-
-</h1>
-
-<p>
-
-Oferta y Demanda en el Modelo de Clare A. Gunn
-
-</p>
-
-</div>
-
-<div class="infoJuego">
-
-<div id="numeroPregunta">
-
-Pregunta
-
-1 / 12
 
 </div>
 
 <div id="temporizador">
 
-20
+30
+
+</div>
+
+<div class="marcador rojo">
+
+<h3>
+
+EQUIPO ROJO
+
+</h3>
+
+<span id="puntajeRojo">
+
+0
+
+</span>
 
 </div>
 
 </div>
 
-</header>
-
-    <!-- ==========================
-        MARCADOR
-=========================== -->
-
-<div class="marcadorGeneral">
-
-    <div class="equipo marcadorAzul">
-
-        <h2>🔵 EQUIPO AZUL</h2>
-
-        <span id="puntajeAzul">
-
-            0
-
-        </span>
-
-        <small>PUNTOS</small>
-
-    </div>
-
-
-    <div class="ronda">
-
-        <h3>RONDA</h3>
-
-        <span id="numeroRonda">
-
-            1
-
-        </span>
-
-    </div>
-
-
-    <div class="equipo marcadorRojo">
-
-        <h2>🔴 EQUIPO ROJO</h2>
-
-        <span id="puntajeRojo">
-
-            0
-
-        </span>
-
-        <small>PUNTOS</small>
-
-    </div>
-
-</div>
-
-
-
-<!-- ==========================
-        TRES ERRORES
-=========================== -->
-
-<div id="panelErrores">
-
-    <div id="error1" class="error">
-
-        ❌
-
-    </div>
-
-    <div id="error2" class="error">
-
-        ❌
-
-    </div>
-
-    <div id="error3" class="error">
-
-        ❌
-
-    </div>
-
-</div>
-
-
-
-<!-- ==========================
-        TABLERO
-=========================== -->
-
-<div id="tableroPrincipal">
-
-<div class="lucesSuperior">
-
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-
-</div>
-
-
+<!-- ==========================================
+                PREGUNTA
+========================================== -->
 
 <div class="contenedorPregunta">
 
 <h2 id="pregunta">
 
-Aquí aparecerá la pregunta.
+Aquí aparecerá la pregunta...
 
 </h2>
 
 </div>
 
-
+<!-- ==========================================
+                RESPUESTAS
+========================================== -->
 
 <div class="contenedorRespuestas">
 
+<button class="respuesta" data-indice="0">
 
-<button class="respuesta">
+<div class="letra">
 
-<span>A</span>
+A
 
-<p>
-Respuesta A
-</p>
+</div>
+
+<p></p>
 
 </button>
 
+<button class="respuesta" data-indice="1">
 
+<div class="letra">
 
-<button class="respuesta">
+B
 
-<span>B</span>
+</div>
 
-<p>
-Respuesta B
-</p>
+<p></p>
 
 </button>
 
+<button class="respuesta" data-indice="2">
 
+<div class="letra">
 
-<button class="respuesta">
+C
 
-<span>C</span>
+</div>
 
-<p>
-Respuesta C
-</p>
+<p></p>
 
 </button>
 
+<button class="respuesta" data-indice="3">
 
+<div class="letra">
 
-<button class="respuesta">
+D
 
-<span>D</span>
+</div>
 
-<p>
-Respuesta D
-</p>
+<p></p>
 
 </button>
 
+<button class="respuesta" data-indice="4">
 
+<div class="letra">
 
-<button class="respuesta">
+E
 
-<span>E</span>
+</div>
 
-<p>
-Respuesta E
-</p>
+<p></p>
 
 </button>
 
+<button class="respuesta" data-indice="5">
 
+<div class="letra">
 
-<button class="respuesta">
+F
 
-<span>F</span>
+</div>
 
-<p>
-Respuesta F
-</p>
+<p></p>
 
 </button>
 
-
-</div>
-
-    <div id="panelErrores">
-
-
-<div class="error">
-❌
 </div>
 
 
-<div class="error">
-❌
-</div>
+    <!-- ==========================================
+                PANEL DE ERRORES
+========================================== -->
 
+<div class="panelErrores">
 
-<div class="error">
-❌
-</div>
+    <div class="error" id="error1">
 
+        ❌
 
-</div>
+    </div>
 
-    
-<div class="lucesInferior">
+    <div class="error" id="error2">
 
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
+        ❌
+
+    </div>
+
+    <div class="error" id="error3">
+
+        ❌
+
+    </div>
 
 </div>
 
+<!-- ==========================================
+            INDICADOR DE TURNO
+========================================== -->
+
+<div class="turnoActual">
+
+    <h3>
+
+        TURNO DE
+
+    </h3>
+
+    <span id="equipoTurno">
+
+        EQUIPO AZUL
+
+    </span>
+
 </div>
 
-
+<!-- ==========================================
+                BOTONES
+========================================== -->
 
 <div class="controlesJuego">
 
-<button
-id="btnSiguiente">
+    <button id="btnCambiarEquipo">
 
-SIGUIENTE PREGUNTA
+        CAMBIAR EQUIPO
 
-</button>
+    </button>
 
-<button
-id="btnCambiarEquipo">
+    <button id="btnSiguiente">
 
-CAMBIAR EQUIPO
+        SIGUIENTE PREGUNTA
 
-</button>
+    </button>
 
 </div>
 
-    <!-- ===========================================
-            PANTALLA GANADOR
-============================================ -->
+</div>
+
+</div>
 
 </section>
 
-<section
-id="pantallaGanador"
-class="pantallaOculta">
+<!-- ===================================================
+            RESPUESTA CORRECTA
+=================================================== -->
 
-    <div class="ganadorContenido">
+<div id="popupCorrecto"
+     class="popup oculto">
+
+    <div class="contenidoPopup correcto">
+
+        <h1>
+
+            ✔
+
+        </h1>
+
+        <h2>
+
+            ¡RESPUESTA CORRECTA!
+
+        </h2>
+
+    </div>
+
+</div>
+
+<!-- ===================================================
+            RESPUESTA INCORRECTA
+=================================================== -->
+
+<div id="popupIncorrecto"
+     class="popup oculto">
+
+    <div class="contenidoPopup incorrecto">
+
+        <h1>
+
+            ❌
+
+        </h1>
+
+        <h2>
+
+            RESPUESTA INCORRECTA
+
+        </h2>
+
+    </div>
+
+</div>
+
+<!-- ===================================================
+                CAMBIO DE TURNO
+=================================================== -->
+
+<div id="popupTurno"
+     class="popup oculto">
+
+    <div class="contenidoPopup turno">
+
+        <h2>
+
+            CAMBIO DE TURNO
+
+        </h2>
+
+        <h1 id="textoCambioTurno">
+
+            EQUIPO ROJO
+
+        </h1>
+
+    </div>
+
+</div>
+
+<!-- ===================================================
+                TIEMPO AGOTADO
+=================================================== -->
+
+<div id="popupTiempo"
+     class="popup oculto">
+
+    <div class="contenidoPopup tiempo">
+
+        <h2>
+
+            ⏰
+
+        </h2>
+
+        <h1>
+
+            ¡SE ACABÓ EL TIEMPO!
+
+        </h1>
+
+    </div>
+
+</div>
+
+<!-- ===================================================
+                PANTALLA GANADOR
+=================================================== -->
+
+<section id="pantallaGanador"
+         class="pantalla oculto">
+
+    <div class="ganador">
 
         <h1>
 
@@ -528,32 +665,19 @@ class="pantallaOculta">
 
         </h1>
 
-        <h2>
-
-            ¡TENEMOS UN GANADOR!
-
-        </h2>
-
-        <h3 id="equipoGanador">
+        <h2 id="textoGanador">
 
             EQUIPO AZUL
 
+        </h2>
+
+        <h3>
+
+            ¡FELICIDADES!
+
         </h3>
 
-        <p>
-
-            Puntaje Final
-
-        </p>
-
-        <span id="puntajeGanador">
-
-            0
-
-        </span>
-
-        <button
-        id="btnReiniciar">
+        <button id="btnReiniciar">
 
             VOLVER A JUGAR
 
@@ -563,327 +687,80 @@ class="pantallaOculta">
 
 </section>
 
+<!-- ===================================================
+            CONTENEDOR CONFETI
+=================================================== -->
 
+<div id="confeti">
 
-<!-- ===========================================
-                MODAL INSTRUCCIONES
-============================================ -->
+</div>
 
-<div
-id="modalInstrucciones"
-class="modal pantallaOculta">
+    <!-- ===================================================
+                    AUDIOS
+=================================================== -->
 
-    <div class="contenidoModal">
+<audio id="musicaFondo" loop preload="auto">
+    <source src="assets/audio/fondo.mp3" type="audio/mpeg">
+</audio>
 
-        <h2>
+<audio id="audioCorrecto" preload="auto">
+    <source src="assets/audio/correcto.mp3" type="audio/mpeg">
+</audio>
 
-            📖 Instrucciones
+<audio id="audioIncorrecto" preload="auto">
+    <source src="assets/audio/error.mp3" type="audio/mpeg">
+</audio>
 
-        </h2>
+<audio id="audioCambio" preload="auto">
+    <source src="assets/audio/cambio.mp3" type="audio/mpeg">
+</audio>
 
-        <ul>
+<audio id="audioVictoria" preload="auto">
+    <source src="assets/audio/ganador.mp3" type="audio/mpeg">
+</audio>
 
-            <li>
-                El profesor selecciona el equipo que responderá.
-            </li>
+<!-- ===================================================
+            EFECTOS VISUALES
+=================================================== -->
 
-            <li>
-                Cada pregunta tiene seis opciones.
-            </li>
+<div id="overlayOscuro"
+     class="oculto">
 
-            <li>
-                Cada error resta puntos.
-            </li>
+</div>
 
-            <li>
-                Después de tres errores el turno cambia al otro equipo.
-            </li>
+<div id="pantallaCarga"
+     class="oculto">
 
-            <li>
-                Si el segundo equipo responde correctamente obtiene solamente una parte del puntaje.
-            </li>
-
-            <li>
-                Gana el equipo con mayor cantidad de puntos.
-            </li>
-
-        </ul>
-
-        <button
-        id="cerrarInstrucciones">
-
-            CERRAR
-
-        </button>
+    <div class="spinner">
 
     </div>
 
-</div>
+    <h2>
 
+        Cargando...
 
-
-<!-- ===========================================
-                MODAL CONFIGURACIÓN
-============================================ -->
-
-<div
-id="modalConfiguracion"
-class="modal pantallaOculta">
-
-<div class="contenidoModal">
-
-<h2>
-
-⚙ Configuración
-
-</h2>
-
-<label>
-
-Tiempo por pregunta
-
-</label>
-
-<select id="configTiempo">
-
-<option value="20">
-
-20 segundos
-
-</option>
-
-<option value="30">
-
-30 segundos
-
-</option>
-
-<option value="40">
-
-40 segundos
-
-</option>
-
-<option value="60">
-
-60 segundos
-
-</option>
-
-</select>
-
-
-<label>
-
-Número de preguntas
-
-</label>
-
-<select id="configCantidad">
-
-<option value="10">
-
-10
-
-</option>
-
-<option value="12" selected>
-
-12
-
-</option>
-
-<option value="15">
-
-15
-
-</option>
-
-<option value="20">
-
-20
-
-</option>
-
-</select>
-
-
-<label>
-
-Volumen de música
-
-</label>
-
-<input
-type="range"
-id="volumen"
-min="0"
-max="100"
-value="60">
-
-
-<button
-id="guardarConfiguracion">
-
-GUARDAR
-
-</button>
+    </h2>
 
 </div>
 
-</div>
+<!-- ===================================================
+            CONTENEDOR DE MENSAJES
+=================================================== -->
 
+<div id="mensajeEmergente"
+     class="oculto">
 
+    <span id="textoMensaje">
 
-<!-- ===========================================
-                    CRÉDITOS
-============================================ -->
-
-<div
-id="modalCreditos"
-class="modal pantallaOculta">
-
-<div class="contenidoModal">
-
-<h2>
-
-🏆 Créditos
-
-</h2>
-
-<p>
-
-Proyecto desarrollado para la Licenciatura en
-Gestión e Innovación Turística.
-
-</p>
-
-<p>
-
-Tema:
-
-Oferta y Demanda en el Modelo Turístico
-de Clare A. Gunn.
-
-</p>
-
-<p>
-
-Inspirado en la dinámica televisiva
-"100 Mexicanos Dijeron".
-
-</p>
-
-<p>
-
-Universidad Autónoma del Estado de México
-
-</p>
-
-<button
-id="cerrarCreditos">
-
-CERRAR
-
-</button>
+    </span>
 
 </div>
 
-</div>
-
-
-
-<!-- ===========================================
-                EFECTOS VISUALES
-============================================ -->
-
-<div id="flashRojo"></div>
-
-<div id="flashVerde"></div>
-
-<div id="confeti"></div>
-
-<div id="serpentinas"></div>
-
-<div id="pantallaError">
-
-❌
-
-</div>
-
-<div id="pantallaCorrecto">
-
-✔
-
-</div>
-
-
-
-<!-- ===========================================
-                    AUDIOS
-============================================ -->
-
-<audio
-id="musicaFondo"
-loop>
-
-<source
-src="assets/audio/fondo.mp3"
-type="audio/mpeg">
-
-</audio>
-
-
-<audio
-id="audioCorrecto">
-
-<source
-src="assets/audio/correcto.mp3"
-type="audio/mpeg">
-
-</audio>
-
-
-<audio
-id="audioIncorrecto">
-
-<source
-src="assets/audio/error.mp3"
-type="audio/mpeg">
-
-</audio>
-
-
-<audio
-id="audioCambio">
-
-<source
-src="assets/audio/cambio.mp3"
-type="audio/mpeg">
-
-</audio>
-
-
-<audio
-id="audioVictoria">
-
-<source
-src="assets/audio/ganador.mp3"
-type="audio/mpeg">
-
-</audio>
-
-
-
-<!-- ===========================================
+<!-- ===================================================
                 JAVASCRIPT
-============================================ -->
+=================================================== -->
 
 <script src="preguntas.js"></script>
-
-<script src="equipos.js"></script>
-
-<script src="sonidos.js"></script>
 
 <script src="script.js"></script>
 
