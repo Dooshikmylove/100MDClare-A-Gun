@@ -1,1854 +1,3480 @@
-/* ==========================================
-   100 POTROMOCHILEROS DIJERON
-   Diseñado por ChatGPT
-========================================== */
+/*=========================================================
+        100 POTROMOCHILEROS DIJERON
+        ESTILOS OFICIALES
+=========================================================*/
+
+:root{
+
+    --morado:#4b0f75;
+    --moradoOscuro:#2a0148;
+    --azul:#1795ff;
+    --azulOscuro:#0b3e91;
+    --amarillo:#ffd633;
+    --verde:#2ecc71;
+    --rojo:#ff3d4d;
+    --blanco:#ffffff;
+    --negro:#101010;
+
+}
 
 *{
+
     margin:0;
     padding:0;
     box-sizing:border-box;
-}
 
-html{
-    scroll-behavior:smooth;
 }
 
 body{
 
-    font-family:'Poppins',sans-serif;
+    font-family:'Montserrat',sans-serif;
 
-    background:#050816;
-
-    overflow:hidden;
+    background:var(--morado);
 
     color:white;
 
-}
-
-/*=========================================
-            FONDO
-=========================================*/
-
-body{
-
-background:
-radial-gradient(circle at top,#143b9d 0%,#08142c 35%,#030712 100%);
-
-min-height:100vh;
+    overflow:hidden;
 
 }
 
-/*=========================================
-            LOADER
-=========================================*/
+/*=========================================================
+                    PANTALLAS
+=========================================================*/
 
-#loader{
+.pantalla{
 
-position:fixed;
+    width:100vw;
+    height:100vh;
 
-top:0;
+    display:flex;
 
-left:0;
+    justify-content:center;
 
-width:100%;
-
-height:100%;
-
-background:#000814;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-z-index:9999;
-
-flex-direction:column;
+    align-items:center;
 
 }
 
-.loader-contenido{
+.oculto{
 
-text-align:center;
-
-}
-
-.loader-contenido h1{
-
-font-size:4rem;
-
-font-weight:900;
-
-letter-spacing:5px;
-
-color:#ffd54a;
-
-text-shadow:
-
-0 0 15px #ffd54a,
-
-0 0 35px #ffb300,
-
-0 0 60px orange;
-
-animation:brillo 2s infinite;
+    display:none !important;
 
 }
 
-.loader-contenido p{
 
-margin-top:20px;
+/*=========================================================
+                FONDO INICIAL
+=========================================================*/
 
-font-size:1.1rem;
+.fondoInicio{
 
-opacity:.8;
+    width:100%;
+    height:100%;
 
-}
+    position:relative;
 
-.loader-luces{
+    overflow:hidden;
 
-margin-top:35px;
+    display:flex;
 
-display:flex;
+    justify-content:center;
 
-gap:15px;
+    align-items:center;
 
-justify-content:center;
+    flex-direction:column;
 
-}
+    background:
 
-.loader-luces span{
-
-width:16px;
-
-height:16px;
-
-border-radius:50%;
-
-background:#ffd54a;
-
-animation:luces 1s infinite alternate;
+    radial-gradient(circle at top,
+    #6420aa,
+    #3a0b68 70%,
+    #23003d);
 
 }
 
-.loader-luces span:nth-child(2){animation-delay:.2s;}
-.loader-luces span:nth-child(3){animation-delay:.4s;}
-.loader-luces span:nth-child(4){animation-delay:.6s;}
-.loader-luces span:nth-child(5){animation-delay:.8s;}
-.loader-luces span:nth-child(6){animation-delay:1s;}
-.loader-luces span:nth-child(7){animation-delay:1.2s;}
-.loader-luces span:nth-child(8){animation-delay:1.4s;}
 
-/*=========================================
-            MENÚ
-=========================================*/
+/*=========================================================
+                FIGURAS
+=========================================================*/
 
-#inicio{
+.figura{
 
-position:absolute;
+    position:absolute;
 
-width:100%;
+    border-radius:30px;
 
-height:100vh;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
+    animation:flotar 8s ease-in-out infinite;
 
 }
+
+.rosa{
+
+    width:180px;
+    height:180px;
+
+    background:#ff4fa3;
+
+    left:5%;
+    top:8%;
+
+}
+
+.azul{
+
+    width:200px;
+    height:200px;
+
+    background:#2aa9ff;
+
+    right:6%;
+    top:15%;
+
+}
+
+.amarilla{
+
+    width:180px;
+    height:180px;
+
+    background:#ffd633;
+
+    left:10%;
+    bottom:10%;
+
+}
+
+.verde{
+
+    width:180px;
+    height:180px;
+
+    background:#47d85f;
+
+    right:10%;
+    bottom:10%;
+
+}
+
+
+/*=========================================================
+                LOGO
+=========================================================*/
 
 .logoPrincipal{
 
-text-align:center;
+    text-align:center;
 
-margin-bottom:50px;
-
-}
-
-.logoPrincipal h2{
-
-font-size:4rem;
-
-color:#ffd54a;
+    z-index:20;
 
 }
 
 .logoPrincipal h1{
 
-font-size:5rem;
+    display:flex;
 
-font-weight:900;
+    flex-direction:column;
 
-letter-spacing:3px;
-
-color:white;
-
-text-shadow:
-
-0 0 10px #2196f3,
-
-0 0 30px #2196f3,
-
-0 0 50px #2196f3;
+    gap:10px;
 
 }
 
-.logoPrincipal h3{
+.numero{
 
-font-size:3rem;
+    font-size:110px;
 
-color:#ffd54a;
+    font-weight:900;
 
-}
+    color:var(--amarillo);
 
-.logoPrincipal p{
+    text-shadow:
 
-margin-top:20px;
+    5px 5px #8b5e00,
 
-font-size:1.1rem;
-
-opacity:.9;
+    0 0 25px gold;
 
 }
 
-/*=========================================
-            BOTONES
-=========================================*/
+.potro{
+
+    font-size:60px;
+
+    font-weight:900;
+
+    color:white;
+
+    text-shadow:
+
+    4px 4px #00000070;
+
+}
+
+.dijeron{
+
+    font-size:80px;
+
+    font-weight:900;
+
+    color:#3dbdff;
+
+    text-shadow:
+
+    5px 5px #003d80;
+
+}
+
+
+/*=========================================================
+                BOTONES
+=========================================================*/
 
 .menuPrincipal{
 
-display:flex;
+    margin-top:50px;
 
-flex-direction:column;
+    display:flex;
 
-gap:20px;
+    flex-direction:column;
 
-width:350px;
+    gap:20px;
+
+    z-index:20;
 
 }
 
 .menuPrincipal button{
 
-padding:18px;
+    width:360px;
 
-border:none;
+    padding:18px;
 
-border-radius:12px;
+    border:none;
 
-background:#1565c0;
+    border-radius:18px;
 
-color:white;
+    font-size:24px;
 
-font-size:1.1rem;
+    font-weight:900;
 
-font-weight:bold;
+    cursor:pointer;
 
-cursor:pointer;
+    transition:.35s;
 
-transition:.35s;
+    letter-spacing:1px;
 
-box-shadow:
+}
 
-0 0 15px #1976d2;
+#btnJugar{
+
+    background:var(--amarillo);
+
+    color:#5c4300;
+
+}
+
+#btnInstrucciones{
+
+    background:var(--azul);
+
+    color:white;
+
+}
+
+#btnConfiguracion{
+
+    background:var(--verde);
+
+    color:white;
+
+}
+
+#btnCreditos{
+
+    background:var(--rojo);
+
+    color:white;
 
 }
 
 .menuPrincipal button:hover{
 
-background:#1e88e5;
+    transform:scale(1.08);
 
-transform:scale(1.05);
+    box-shadow:
 
-box-shadow:
+    0 0 25px rgba(255,255,255,.7);
 
-0 0 25px #42a5f5,
-
-0 0 50px #42a5f5;
-
-}
-
-/*=========================================
-        ANIMACIONES
-=========================================*/
-
-@keyframes brillo{
-
-0%{
-
-transform:scale(1);
-
-}
-
-50%{
-
-transform:scale(1.05);
-
-}
-
-100%{
-
-transform:scale(1);
-
-}
-
-}
-
-@keyframes luces{
-
-from{
-
-opacity:.3;
-
-transform:scale(.8);
-
-}
-
-to{
-
-opacity:1;
-
-transform:scale(1.4);
-
-}
-
-}
-
-/*=========================================
-        PANTALLAS OCULTAS
-=========================================*/
-
-.pantallaOculta{
-
-display:none!important;
-
-}
-
-
-/*=========================================
-        SELECCIÓN DE EQUIPOS
-=========================================*/
-
-#seleccionEquipos{
-
-position:absolute;
-
-width:100%;
-
-height:100vh;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
-background:
-
-radial-gradient(circle,#123c88,#050816);
-
-}
-
-
-#seleccionEquipos h2{
-
-font-size:3rem;
-
-text-align:center;
-
-text-shadow:
-
-0 0 20px #42a5f5;
-
-}
-
-
-#seleccionEquipos p{
-
-font-size:1.3rem;
-
-margin:20px;
-
-}
-
-
-
-.equipos{
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-gap:50px;
-
-margin-top:40px;
-
-}
-
-
-
-.equipos button{
-
-width:280px;
-
-height:220px;
-
-border-radius:20px;
-
-border:none;
-
-cursor:pointer;
-
-font-size:2rem;
-
-font-weight:bold;
-
-color:white;
-
-transition:.4s;
-
-}
-
-
-
-#equipoAzul{
-
-background:
-
-linear-gradient(145deg,#1565c0,#001970);
-
-box-shadow:
-
-0 0 25px #2196f3;
-
-}
-
-
-
-#equipoRojo{
-
-background:
-
-linear-gradient(145deg,#d32f2f,#7f0000);
-
-box-shadow:
-
-0 0 25px #ff5252;
-
-}
-
-
-
-.equipos button:hover{
-
-transform:translateY(-15px) scale(1.05);
-
-}
-
-
-
-.vs{
-
-font-size:3rem;
-
-font-weight:900;
-
-color:#ffd54a;
-
-text-shadow:
-
-0 0 20px orange;
-
-}
-
-
-
-/*=========================================
-            JUEGO
-=========================================*/
-
-
-#juego{
-
-position:absolute;
-
-width:100%;
-
-min-height:100vh;
-
-padding:25px;
-
-background:
-
-radial-gradient(circle,#102b66,#020617);
-
-}
-
-
-
-/*=========================================
-            HEADER JUEGO
-=========================================*/
-
-
-.tituloJuego{
-
-text-align:center;
-
-}
-
-
-
-.tituloJuego h1{
-
-font-size:3rem;
-
-color:#ffd54a;
-
-text-shadow:
-
-0 0 15px orange,
-
-0 0 30px #ff9800;
-
-}
-
-
-
-.tituloJuego p{
-
-font-size:1.2rem;
-
-margin-top:10px;
-
-}
-
-
-
-.infoJuego{
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-margin-top:20px;
-
-padding:0 40px;
-
-}
-
-
-
-/*=========================================
-            TEMPORIZADOR
-=========================================*/
-
-
-#temporizador{
-
-width:120px;
-
-height:120px;
-
-border-radius:50%;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:3rem;
-
-font-weight:900;
-
-background:
-
-conic-gradient(#ffd54a 100%,transparent 0);
-
-box-shadow:
-
-0 0 25px #ffd54a;
-
-}
-
-
-
-#temporizador::before{
-
-content:"";
-
-position:absolute;
-
-width:90px;
-
-height:90px;
-
-background:#050816;
-
-border-radius:50%;
-
-z-index:0;
-
-}
-
-
-
-#temporizador{
-
-position:relative;
-
-}
-
-
-
-#temporizador{
-
-z-index:1;
-
-}
-
-
-/*=========================================
-            MARCADORES
-=========================================*/
-
-
-.marcadorGeneral{
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-gap:40px;
-
-margin:30px auto;
-
-}
-
-
-
-.equipo{
-
-width:280px;
-
-padding:25px;
-
-border-radius:20px;
-
-text-align:center;
-
-background:#07142d;
-
-}
-
-
-
-.equipo h2{
-
-font-size:1.4rem;
-
-}
-
-
-
-.equipo span{
-
-display:block;
-
-font-size:4rem;
-
-font-weight:900;
-
-margin:15px;
-
-}
-
-
-
-.marcadorAzul{
-
-border:3px solid #2196f3;
-
-box-shadow:
-
-0 0 25px #2196f3;
-
-}
-
-
-
-.marcadorRojo{
-
-border:3px solid #f44336;
-
-box-shadow:
-
-0 0 25px #f44336;
-
-}
-
-
-
-.ronda{
-
-text-align:center;
-
-}
-
-
-
-.ronda h3{
-
-font-size:1.2rem;
-
-}
-
-
-
-.ronda span{
-
-font-size:3rem;
-
-font-weight:bold;
-
-color:#ffd54a;
-
-}
-
-
-/*=========================================
-        TABLERO PRINCIPAL
-=========================================*/
-
-
-#tableroPrincipal{
-
-width:90%;
-
-max-width:1200px;
-
-margin:30px auto;
-
-background:
-
-linear-gradient(
-145deg,
-#0b1d42,
-#020617
-);
-
-border-radius:25px;
-
-padding:35px;
-
-position:relative;
-
-border:5px solid #1976d2;
-
-box-shadow:
-
-0 0 25px #2196f3,
-
-0 0 50px #0d47a1,
-
-inset 0 0 25px #1565c0;
-
-}
-
-
-
-/*=========================================
-            LUCES LED TABLERO
-=========================================*/
-
-
-.lucesSuperior,
-.lucesInferior{
-
-display:flex;
-
-justify-content:space-around;
-
-position:absolute;
-
-left:20px;
-
-right:20px;
-
-}
-
-
-
-.lucesSuperior{
-
-top:8px;
-
-}
-
-
-
-.lucesInferior{
-
-bottom:8px;
-
-}
-
-
-
-.lucesSuperior span,
-.lucesInferior span{
-
-width:15px;
-
-height:15px;
-
-border-radius:50%;
-
-background:#ffd54a;
-
-box-shadow:
-
-0 0 10px #ffd54a,
-
-0 0 25px orange;
-
-animation:parpadear 1s infinite alternate;
-
-}
-
-
-
-.lucesSuperior span:nth-child(even),
-.lucesInferior span:nth-child(even){
-
-animation-delay:.5s;
-
-}
-
-
-
-@keyframes parpadear{
-
-from{
-
-opacity:.3;
-
-}
-
-to{
-
-opacity:1;
-
-}
-
-}
-
-
-
-/*=========================================
-            PREGUNTA
-=========================================*/
-
-
-.contenedorPregunta{
-
-margin:50px auto 30px;
-
-background:#020617;
-
-padding:30px;
-
-border-radius:20px;
-
-border:3px solid #ffd54a;
-
-box-shadow:
-
-0 0 20px #ffd54a;
-
-text-align:center;
-
-}
-
-
-
-#pregunta{
-
-font-size:2rem;
-
-line-height:1.4;
-
-}
-
-
-
-/*=========================================
-            RESPUESTAS
-=========================================*/
-
-
-.contenedorRespuestas{
-
-display:grid;
-
-grid-template-columns:
-
-repeat(2,1fr);
-
-gap:20px;
-
-}
-
-
-
-.respuesta{
-
-min-height:90px;
-
-border:none;
-
-border-radius:15px;
-
-cursor:pointer;
-
-display:flex;
-
-align-items:center;
-
-gap:20px;
-
-padding:20px;
-
-background:
-
-linear-gradient(
-90deg,
-#0d47a1,
-#1565c0
-);
-
-color:white;
-
-font-size:1.2rem;
-
-font-weight:bold;
-
-transition:.3s;
-
-box-shadow:
-
-0 0 15px #1976d2;
-
-}
-
-
-
-.respuesta span{
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-width:45px;
-
-height:45px;
-
-border-radius:50%;
-
-background:#ffd54a;
-
-color:#111;
-
-font-size:1.5rem;
-
-}
-
-
-
-.respuesta:hover{
-
-transform:scale(1.03);
-
-background:
-
-linear-gradient(
-90deg,
-#1976d2,
-#42a5f5
-);
-
-}
-
-
-
-/*=========================================
-        RESPUESTA CORRECTA
-=========================================*/
-
-
-.respuesta.correcta{
-
-background:
-
-linear-gradient(
-90deg,
-#1b5e20,
-#4caf50
-);
-
-box-shadow:
-
-0 0 30px #4caf50;
-
-animation:correcta .6s;
-
-}
-
-
-
-@keyframes correcta{
-
-0%{
-
-transform:scale(1);
-
-}
-
-50%{
-
-transform:scale(1.08);
-
-}
-
-100%{
-
-transform:scale(1);
-
-}
-
-}
-
-
-
-/*=========================================
-        RESPUESTA INCORRECTA
-=========================================*/
-
-
-.respuesta.incorrecta{
-
-background:
-
-linear-gradient(
-90deg,
-#7f0000,
-#f44336
-);
-
-animation:error .4s;
-
-}
-
-
-
-@keyframes error{
-
-0%{
-
-transform:translateX(0);
-
-}
-
-25%{
-
-transform:translateX(-15px);
-
-}
-
-50%{
-
-transform:translateX(15px);
-
-}
-
-75%{
-
-transform:translateX(-15px);
-
-}
-
-100%{
-
-transform:translateX(0);
-
-}
-
-}
-
-
-
-/*=========================================
-            PANEL X
-=========================================*/
-
-
-#panelErrores{
-
-display:flex;
-
-justify-content:center;
-
-gap:30px;
-
-margin:25px;
-
-}
-
-
-
-.error{
-
-font-size:4rem;
-
-opacity:.15;
-
-filter:grayscale(1);
-
-transition:.3s;
-
-}
-
-
-
-.error.activo{
-
-opacity:1;
-
-filter:none;
-
-animation:aparecerX .5s;
-
-}
-
-
-
-@keyframes aparecerX{
-
-0%{
-
-transform:scale(0);
-
-}
-
-70%{
-
-transform:scale(1.3);
-
-}
-
-100%{
-
-transform:scale(1);
-
-}
-
-}
-
-
-
-/*=========================================
-        BOTONES DEL JUEGO
-=========================================*/
-
-
-.controlesJuego{
-
-display:flex;
-
-justify-content:center;
-
-gap:25px;
-
-margin:30px;
-
-}
-
-
-
-.controlesJuego button{
-
-padding:15px 35px;
-
-border:none;
-
-border-radius:15px;
-
-background:#ffd54a;
-
-color:#111;
-
-font-size:1rem;
-
-font-weight:bold;
-
-cursor:pointer;
-
-transition:.3s;
-
-}
-
-
-
-.controlesJuego button:hover{
-
-transform:scale(1.08);
-
-box-shadow:
-
-0 0 25px #ffd54a;
-
-}
-
-/*=========================================
-        PANTALLA GANADOR
-=========================================*/
-
-
-#pantallaGanador{
-
-position:absolute;
-
-width:100%;
-
-height:100vh;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-background:
-
-radial-gradient(circle,#173f8f,#020617);
-
-}
-
-
-
-.ganadorContenido{
-
-text-align:center;
-
-padding:50px;
-
-background:#07142d;
-
-border-radius:30px;
-
-border:4px solid #ffd54a;
-
-box-shadow:
-
-0 0 40px #ffd54a;
-
-animation:entradaGanador 1s;
-
-}
-
-
-
-.ganadorContenido h1{
-
-font-size:7rem;
-
-animation:flotar 2s infinite;
-
-}
-
-
-
-.ganadorContenido h2{
-
-font-size:3rem;
-
-color:#ffd54a;
-
-}
-
-
-
-#equipoGanador{
-
-font-size:3rem;
-
-margin:25px;
-
-}
-
-
-
-#puntajeGanador{
-
-display:block;
-
-font-size:4rem;
-
-font-weight:900;
-
-color:white;
-
-margin:20px;
-
-}
-
-
-
-#btnReiniciar{
-
-padding:18px 40px;
-
-border:none;
-
-border-radius:15px;
-
-background:#1976d2;
-
-color:white;
-
-font-weight:bold;
-
-font-size:1.2rem;
-
-cursor:pointer;
-
-}
-
-
-
-#btnReiniciar:hover{
-
-transform:scale(1.1);
-
-}
-
-
-
-@keyframes entradaGanador{
-
-from{
-
-opacity:0;
-
-transform:scale(.5);
-
-}
-
-to{
-
-opacity:1;
-
-transform:scale(1);
-
-}
-
 }
 
 
+/*=========================================================
+                ANIMACIONES
+=========================================================*/
 
 @keyframes flotar{
 
 0%{
 
-transform:translateY(0);
+transform:translateY(0px);
 
 }
 
 50%{
 
-transform:translateY(-20px);
+transform:translateY(-12px);
 
 }
 
 100%{
 
-transform:translateY(0);
+transform:translateY(0px);
 
 }
 
 }
 
+.logoPrincipal{
 
+animation:flotar 3s infinite;
 
-/*=========================================
-            MODALES
-=========================================*/
+}
 
+.figura{
 
-.modal{
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-height:100%;
-
-background:
-
-rgba(0,0,0,.8);
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-z-index:500;
+animation:flotar 6s infinite;
 
 }
 
 
+/*=========================================================
+                VENTANAS SECUNDARIAS
+=========================================================*/
 
-.contenidoModal{
+.ventana{
 
-width:90%;
+    width:min(850px,90vw);
 
-max-width:600px;
+    max-height:85vh;
 
-background:#07142d;
+    overflow-y:auto;
 
-padding:40px;
+    padding:55px;
 
-border-radius:25px;
+    border-radius:30px;
 
-border:3px solid #2196f3;
+    background:
 
-box-shadow:
+    linear-gradient(
+        145deg,
+        #5b1688,
+        #290044
+    );
 
-0 0 35px #2196f3;
+    border:4px solid var(--amarillo);
+
+    box-shadow:
+
+        0 0 30px #00000080,
+
+        inset 0 0 30px #ffffff12;
+
+    text-align:center;
+
+}
+
+.ventana h2{
+
+    font-size:48px;
+
+    margin-bottom:35px;
+
+    color:var(--amarillo);
+
+    font-weight:900;
+
+}
+
+.ventana p{
+
+    font-size:20px;
+
+    line-height:1.7;
+
+    margin:15px 0;
+
+}
+
+.ventana ul{
+
+    text-align:left;
+
+    max-width:650px;
+
+    margin:0 auto 35px;
+
+}
+
+.ventana li{
+
+    font-size:19px;
+
+    line-height:1.6;
+
+    margin:15px 0;
+
+}
+
+.ventana button{
+
+    padding:16px 50px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:var(--amarillo);
+
+    color:#4b3500;
+
+    font-size:20px;
+
+    font-weight:900;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.ventana button:hover{
+
+    transform:scale(1.07);
+
+    box-shadow:
+
+        0 0 25px #ffd633aa;
 
 }
 
 
+/*=========================================================
+                SELECCIÓN DE EQUIPOS
+=========================================================*/
 
-.contenidoModal h2{
+#pantallaEquipos{
 
-text-align:center;
+    background:
 
-color:#ffd54a;
-
-margin-bottom:25px;
-
-}
-
-
-
-.contenidoModal li{
-
-margin:15px 0;
-
-line-height:1.5;
+    radial-gradient(
+        circle at center,
+        #66199b,
+        #26003f
+    );
 
 }
 
+.contenedorEquipos{
 
-
-.contenidoModal button{
-
-margin-top:25px;
-
-width:100%;
-
-padding:15px;
-
-border:none;
-
-border-radius:12px;
-
-background:#1976d2;
-
-color:white;
-
-font-weight:bold;
-
-cursor:pointer;
+    text-align:center;
 
 }
 
+.contenedorEquipos h2{
 
+    font-size:52px;
 
-/*=========================================
-        EFECTOS CORRECTO ERROR
-=========================================*/
+    font-weight:900;
 
+    color:var(--amarillo);
 
-#flashRojo,
-#flashVerde{
+    margin-bottom:55px;
 
-position:fixed;
+    text-shadow:
 
-top:0;
-
-left:0;
-
-width:100%;
-
-height:100%;
-
-pointer-events:none;
-
-opacity:0;
-
-z-index:800;
+        0 5px 0 #00000055;
 
 }
-
-
-
-#flashRojo{
-
-background:#ff0000;
-
-}
-
-
-
-#flashVerde{
-
-background:#00ff44;
-
-}
-
-
-
-.activarRojo{
-
-animation:flashRojo .5s;
-
-}
-
-
-
-.activarVerde{
-
-animation:flashVerde .5s;
-
-}
-
-
-
-@keyframes flashRojo{
-
-0%{
-
-opacity:.8;
-
-}
-
-100%{
-
-opacity:0;
-
-}
-
-}
-
-
-
-@keyframes flashVerde{
-
-0%{
-
-opacity:.6;
-
-}
-
-100%{
-
-opacity:0;
-
-}
-
-}
-
-
-
-/*=========================================
-        X Y PALOMITA GRANDE
-=========================================*/
-
-
-#pantallaError,
-#pantallaCorrecto{
-
-position:fixed;
-
-top:50%;
-
-left:50%;
-
-transform:translate(-50%,-50%);
-
-font-size:15rem;
-
-display:none;
-
-z-index:1000;
-
-}
-
-
-
-#pantallaError{
-
-color:#ff1744;
-
-text-shadow:
-
-0 0 30px red;
-
-}
-
-
-
-#pantallaCorrecto{
-
-color:#00e676;
-
-text-shadow:
-
-0 0 30px green;
-
-}
-
-
-
-/*=========================================
-        CONFETI / SERPENTINAS
-=========================================*/
-
-
-#confeti,
-#serpentinas{
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-height:100%;
-
-pointer-events:none;
-
-}
-
-
-
-/*=========================================
-        SELECTORES
-=========================================*/
-
-
-select,
-input[type="range"]{
-
-width:100%;
-
-margin:15px 0;
-
-padding:10px;
-
-border-radius:10px;
-
-}
-
-
-
-/*=========================================
-        RESPONSIVE CELULAR
-=========================================*/
-
-
-@media(max-width:900px){
-
-
-.logoPrincipal h1{
-
-font-size:3rem;
-
-}
-
-
-.logoPrincipal h2{
-
-font-size:2.5rem;
-
-}
-
-
-.logoPrincipal h3{
-
-font-size:2rem;
-
-}
-
-
 
 .equipos{
 
-flex-direction:column;
+    display:flex;
 
-gap:20px;
+    justify-content:center;
+
+    align-items:center;
+
+    gap:60px;
+
+    flex-wrap:wrap;
+
+}
+
+.btnEquipo{
+
+    width:300px;
+
+    height:220px;
+
+    border:none;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    color:white;
+
+    font-family:inherit;
+
+    font-size:70px;
+
+    font-weight:900;
+
+    transition:.35s;
+
+}
+
+.btnEquipo span{
+
+    font-size:25px;
+
+}
+
+.btnEquipo.azul{
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #159fff,
+            #0754b9
+        );
+
+    box-shadow:
+
+        0 12px 0 #063a80,
+
+        0 0 35px #159fff66;
+
+}
+
+.btnEquipo.rojo{
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #ff4c59,
+            #a90c1d
+        );
+
+    box-shadow:
+
+        0 12px 0 #73000d,
+
+        0 0 35px #ff3d4d66;
+
+}
+
+.btnEquipo:hover{
+
+    transform:
+
+        translateY(-10px)
+        scale(1.05);
+
+}
+
+.btnEquipo:active{
+
+    transform:
+
+        translateY(5px)
+        scale(.98);
+
+}
+
+
+/*=========================================================
+                MARCO DEL TABLERO
+=========================================================*/
+
+#pantallaJuego{
+
+    background:
+
+        radial-gradient(
+            circle,
+            #40106b,
+            #190027
+        );
+
+    padding:25px;
+
+}
+
+.marcoExterior{
+
+    position:relative;
+
+    width:min(1450px,96vw);
+
+    height:min(920px,94vh);
+
+    padding:18px;
+
+    border-radius:45px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ffd633,
+            #ff9d00,
+            #ffd633
+        );
+
+    box-shadow:
+
+        0 0 35px #ffd63388,
+
+        inset 0 0 15px white;
 
 }
 
 
 
-.marcadorGeneral{
+/*=========================================================
+                FOCOS DECORATIVOS
+=========================================================*/
 
-flex-direction:column;
+.marcoExterior::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:7px;
+
+    border-radius:38px;
+
+    pointer-events:none;
+
+    background:
+
+        radial-gradient(
+            circle,
+            white 0 4px,
+            #ffd633 5px 9px,
+            transparent 10px
+        );
+
+    background-size:42px 42px;
+
+    opacity:.95;
+
+    z-index:0;
+
+}
+
+.marcoExterior::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:45px;
+
+    box-shadow:
+
+        inset 0 0 35px #ffffff55;
+
+    pointer-events:none;
+
+    z-index:0;
 
 }
 
 
+/*=========================================================
+                PANEL PRINCIPAL
+=========================================================*/
 
-.contenedorRespuestas{
+.panelPrincipal{
 
-grid-template-columns:1fr;
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    height:100%;
+
+    padding:50px 55px 35px;
+
+    border-radius:32px;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 0%,
+            #168fe7,
+            #0753a8 55%,
+            #032b67
+        );
+
+    border:
+
+        5px solid #083c82;
+
+    box-shadow:
+
+        inset 0 0 45px #00000055;
+
+    overflow:hidden;
+
+}
+
+/*=========================================================
+                ÓVALO SUPERIOR
+=========================================================*/
+
+.ovaloSuperior{
+
+    position:absolute;
+
+    top:-5px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:370px;
+
+    height:85px;
+
+    border-radius:
+
+        0 0 50% 50%;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #ffe96b,
+            #ffb900
+        );
+
+    border:
+
+        5px solid #8f6100;
+
+    box-shadow:
+
+        0 7px 15px #00000066,
+
+        inset 0 5px 8px #ffffff88;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.ovaloSuperior span{
+
+    font-size:25px;
+
+    font-weight:900;
+
+    color:#4b3200;
+
+    letter-spacing:2px;
 
 }
 
 
+/*=========================================================
+                MARCADORES
+=========================================================*/
 
-#tableroPrincipal{
+.barraSuperior{
 
-width:95%;
+    width:100%;
 
-padding:20px;
+    margin-top:45px;
+
+    display:grid;
+
+    grid-template-columns:
+
+        1fr
+        130px
+        1fr;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+.marcador{
+
+    min-height:105px;
+
+    padding:15px 30px;
+
+    border-radius:22px;
+
+    display:flex;
+
+    justify-content:
+
+        space-between;
+
+    align-items:center;
+
+    border:4px solid white;
+
+    box-shadow:
+
+        0 7px 12px #00000055;
+
+}
+
+.marcador h3{
+
+    font-size:20px;
+
+    font-weight:900;
+
+}
+
+.marcador span{
+
+    font-size:48px;
+
+    font-weight:900;
+
+}
+
+.marcador.azul{
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #28aaff,
+            #0757b5
+        );
+
+}
+
+.marcador.rojo{
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ff5662,
+            #a80e20
+        );
 
 }
 
 
+/*=========================================================
+                TEMPORIZADOR
+=========================================================*/
+
+#temporizador{
+
+    width:110px;
+
+    height:110px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+
+        radial-gradient(
+            circle,
+            #ffffff,
+            #dceeff
+        );
+
+    border:
+
+        8px solid var(--amarillo);
+
+    color:#12356b;
+
+    font-size:42px;
+
+    font-weight:900;
+
+    box-shadow:
+
+        0 0 20px #ffd633,
+
+        inset 0 0 15px #00000025;
+
+    transition:
+
+        .3s;
+
+}
+
+
+/*=========================================================
+                PREGUNTA
+=========================================================*/
+
+.contenedorPregunta{
+
+    width:100%;
+
+    margin:28px auto 20px;
+
+    padding:20px 35px;
+
+    min-height:95px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #0b4f9e,
+            #06366f
+        );
+
+    border:
+
+        4px solid #ffd633;
+
+    border-radius:22px;
+
+    box-shadow:
+
+        0 6px 12px #00000055,
+
+        inset 0 0 20px #00000035;
+
+}
 
 #pregunta{
 
-font-size:1.3rem;
+    font-size:clamp(22px,2.2vw,34px);
+
+    font-weight:800;
+
+    line-height:1.3;
+
+    text-shadow:
+
+        2px 3px 0 #00000055;
 
 }
 
 
+/*=========================================================
+                RESPUESTAS
+=========================================================*/
 
-.tituloJuego h1{
+.contenedorRespuestas{
 
-font-size:1.8rem;
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:16px 22px;
+
+    margin-top:15px;
 
 }
-
-
 
 .respuesta{
 
-font-size:1rem;
+    min-height:72px;
+
+    border:
+
+        4px solid #ffd633;
+
+    border-radius:18px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #e7eef7
+        );
+
+    color:#12386d;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:8px 18px;
+
+    font-family:inherit;
+
+    cursor:pointer;
+
+    box-shadow:
+
+        0 6px 10px #00000055;
+
+    transition:
+
+        transform .2s,
+
+        box-shadow .2s,
+
+        background .2s;
+
+}
+
+.respuesta:hover{
+
+    transform:
+
+        translateY(-4px)
+        scale(1.015);
+
+    box-shadow:
+
+        0 10px 20px #00000066,
+
+        0 0 15px #ffd633aa;
+
+}
+
+.respuesta:active{
+
+    transform:
+
+        scale(.97);
+
+}
+
+.respuesta .letra{
+
+    flex-shrink:0;
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #0c72cf,
+            #063d89
+        );
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+    font-weight:900;
+
+    margin-right:15px;
+
+    box-shadow:
+
+        inset 0 2px 5px #ffffff44,
+
+        0 3px 5px #00000055;
+
+}
+
+.respuesta p{
+
+    margin:0;
+
+    font-size:
+
+        clamp(15px,1.4vw,20px);
+
+    font-weight:700;
+
+    text-align:left;
+
+    line-height:1.25;
+
+}
+
+.respuesta.correcta{
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #75f29b,
+            #1bbd5b
+        );
+
+    color:white;
+
+    border-color:#eaff00;
+
+    box-shadow:
+
+        0 0 25px #5cff8b,
+
+        0 8px 15px #00000055;
+
+}
+
+.respuesta.incorrecta{
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ff6a6a,
+            #c9142b
+        );
+
+    color:white;
+
+    border-color:#ffdfdf;
+
+    box-shadow:
+
+        0 0 25px #ff3030,
+
+        0 8px 15px #00000055;
+
+}
+
+.respuesta:disabled{
+
+    cursor:default;
+
+}
+
+.respuesta:disabled:hover{
+
+    transform:none;
+
+}
+
+
+/*=========================================================
+                PANEL DE ERRORES
+=========================================================*/
+
+.panelErrores{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:28px;
+
+    margin-top:18px;
+
+}
+
+.error{
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:43px;
+
+    background:
+
+        radial-gradient(
+            circle,
+            #17467e,
+            #062c5d
+        );
+
+    border:
+
+        4px solid #ffffff66;
+
+    opacity:.3;
+
+    transform:scale(.9);
+
+    transition:
+
+        opacity .25s,
+
+        transform .25s,
+
+        box-shadow .25s;
+
+}
+
+.error.activo{
+
+    opacity:1;
+
+    transform:
+
+        scale(1.1);
+
+    background:
+
+        radial-gradient(
+            circle,
+            #ff6464,
+            #b60018
+        );
+
+    border-color:white;
+
+    box-shadow:
+
+        0 0 20px #ff3030,
+
+        0 0 45px #ff303088;
+
+    animation:
+
+        sacudirX .4s;
+
+}
+
+@keyframes sacudirX{
+
+    0%{
+
+        transform:scale(1.1)
+                   rotate(0deg);
+
+    }
+
+    25%{
+
+        transform:scale(1.15)
+                   rotate(-8deg);
+
+    }
+
+    50%{
+
+        transform:scale(1.15)
+                   rotate(8deg);
+
+    }
+
+    75%{
+
+        transform:scale(1.15)
+                   rotate(-5deg);
+
+    }
+
+    100%{
+
+        transform:scale(1.1)
+                   rotate(0deg);
+
+    }
+
+}
+
+
+/*=========================================================
+                TURNO ACTUAL
+=========================================================*/
+
+.turnoActual{
+
+    margin-top:12px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-weight:900;
+
+}
+
+.turnoActual h3{
+
+    font-size:14px;
+
+    letter-spacing:1px;
+
+    opacity:.8;
+
+}
+
+#equipoTurno{
+
+    padding:
+
+        7px 20px;
+
+    border-radius:20px;
+
+    background:#ffffff22;
+
+    border:2px solid white;
+
+    font-size:16px;
+
+    box-shadow:
+
+        0 0 12px #ffffff33;
+
+}
+
+
+/*=========================================================
+                CONTROLES
+=========================================================*/
+
+.controlesJuego{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    margin-top:18px;
+
+}
+
+.controlesJuego button{
+
+    padding:
+
+        11px 25px;
+
+    border:
+
+        2px solid white;
+
+    border-radius:13px;
+
+    background:#ffffff18;
+
+    color:white;
+
+    font-family:inherit;
+
+    font-size:14px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.controlesJuego button:hover{
+
+    background:var(--amarillo);
+
+    color:#4a3200;
+
+    border-color:var(--amarillo);
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+        0 0 15px #ffd63388;
+
+}
+
+
+/*=========================================================
+            ANIMACIÓN DE RESPUESTA
+=========================================================*/
+
+.respuesta.revelando{
+
+    animation:
+
+        revelarRespuesta .55s
+        ease forwards;
+
+}
+
+@keyframes revelarRespuesta{
+
+    0%{
+
+        transform:
+
+            rotateY(0deg)
+            scale(1);
+
+    }
+
+    50%{
+
+        transform:
+
+            rotateY(90deg)
+            scale(1.04);
+
+    }
+
+    100%{
+
+        transform:
+
+            rotateY(0deg)
+            scale(1);
+
+    }
 
 }
 
 
 
+/*=========================================================
+                    POPUPS
+=========================================================*/
+
+.popup{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:1000;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+
+        rgba(0,0,0,.72);
+
+    backdrop-filter:
+
+        blur(7px);
+
+    animation:
+
+        aparecerPopup .25s ease;
+
+}
+
+.contenidoPopup{
+
+    width:min(800px,90vw);
+
+    min-height:300px;
+
+    padding:45px;
+
+    border-radius:35px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    border:6px solid white;
+
+    box-shadow:
+
+        0 0 40px #ffffff66,
+
+        0 20px 40px #00000088;
+
+}
+
+.contenidoPopup h1{
+
+    font-size:150px;
+
+    line-height:1;
+
+    margin-bottom:20px;
+
+}
+
+.contenidoPopup h2{
+
+    font-size:38px;
+
+    font-weight:900;
+
+}
+
+
+/*=========================================================
+                    POPUPS
+=========================================================*/
+
+.popup{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:1000;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+
+        rgba(0,0,0,.72);
+
+    backdrop-filter:
+
+        blur(7px);
+
+    animation:
+
+        aparecerPopup .25s ease;
+
+}
+
+.contenidoPopup{
+
+    width:min(800px,90vw);
+
+    min-height:300px;
+
+    padding:45px;
+
+    border-radius:35px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    border:6px solid white;
+
+    box-shadow:
+
+        0 0 40px #ffffff66,
+
+        0 20px 40px #00000088;
+
+}
+
+.contenidoPopup h1{
+
+    font-size:150px;
+
+    line-height:1;
+
+    margin-bottom:20px;
+
+}
+
+.contenidoPopup h2{
+
+    font-size:38px;
+
+    font-weight:900;
+
+}
+
+
+/*=========================================================
+                POPUP INCORRECTO
+=========================================================*/
+
+.contenidoPopup.incorrecto{
+
+    background:
+
+        radial-gradient(
+            circle,
+            #ff4c5c,
+            #850817
+        );
+
+    border-color:
+
+        #ffd2d2;
+
+    box-shadow:
+
+        0 0 40px #ff3030,
+
+        0 0 100px #ff303066;
+
+}
+
+.contenidoPopup.incorrecto h1{
+
+    color:white;
+
+    text-shadow:
+
+        0 0 30px #ffaaaa,
+
+        0 8px 0 #850817;
+
+    animation:
+
+        sacudirGrande .5s ease;
+
+}
+
+.contenidoPopup.incorrecto h2{
+
+    color:white;
+
+}
+
+
+/*=========================================================
+                POPUP INCORRECTO
+=========================================================*/
+
+.contenidoPopup.incorrecto{
+
+    background:
+
+        radial-gradient(
+            circle,
+            #ff4c5c,
+            #850817
+        );
+
+    border-color:
+
+        #ffd2d2;
+
+    box-shadow:
+
+        0 0 40px #ff3030,
+
+        0 0 100px #ff303066;
+
+}
+
+.contenidoPopup.incorrecto h1{
+
+    color:white;
+
+    text-shadow:
+
+        0 0 30px #ffaaaa,
+
+        0 8px 0 #850817;
+
+    animation:
+
+        sacudirGrande .5s ease;
+
+}
+
+.contenidoPopup.incorrecto h2{
+
+    color:white;
+
+}
+
+
+/*=========================================================
+                TIEMPO AGOTADO
+=========================================================*/
+
+.contenidoPopup.tiempo{
+
+    background:
+
+        radial-gradient(
+            circle,
+            #6321a0,
+            #230039
+        );
+
+    border-color:
+
+        var(--amarillo);
+
+}
+
+.contenidoPopup.tiempo h2{
+
+    font-size:110px;
+
+    animation:
+
+        reloj .7s infinite alternate;
+
+}
+
+.contenidoPopup.tiempo h1{
+
+    font-size:48px;
+
+    color:
+
+        var(--amarillo);
+
+}
+
+
+/*=========================================================
+                PANTALLA GANADOR
+=========================================================*/
+
+#pantallaGanador{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            #6b20a3,
+            #230039 75%
+        );
+
+}
+
+.ganador{
+
+    position:relative;
+
+    z-index:5;
+
+    text-align:center;
+
+    animation:
+
+        aparecerGanador .8s ease;
+
+}
+
+.ganador h1{
+
+    font-size:
+
+        clamp(100px,15vw,190px);
+
+    line-height:1;
+
+    margin-bottom:25px;
+
+    filter:
+
+        drop-shadow(
+            0 0 25px gold
+        );
+
+    animation:
+
+        trofeo 1.5s infinite alternate;
+
+}
+
+.ganador h2{
+
+    font-size:
+
+        clamp(45px,7vw,90px);
+
+    font-weight:900;
+
+    color:
+
+        var(--amarillo);
+
+    text-shadow:
+
+        0 7px 0 #8f6100,
+
+        0 0 30px gold;
+
+}
+
+.ganador h3{
+
+    margin-top:15px;
+
+    font-size:
+
+        clamp(25px,4vw,45px);
+
+    color:white;
+
+}
+
+#btnReiniciar{
+
+    margin-top:45px;
+
+    padding:
+
+        18px 50px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:
+
+        var(--amarillo);
+
+    color:#4b3500;
+
+    font-family:inherit;
+
+    font-size:22px;
+
+    font-weight:900;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:
+
+        0 7px 0 #9b6d00;
+
+}
+
+#btnReiniciar:hover{
+
+    transform:
+
+        translateY(-5px)
+        scale(1.05);
+
+    box-shadow:
+
+        0 12px 0 #9b6d00,
+
+        0 0 30px gold;
+
+}
+
+#btnReiniciar:active{
+
+    transform:
+
+        translateY(3px);
+
+}
+
+
+/*=========================================================
+                    CONFETI
+=========================================================*/
+
+#confeti{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:2000;
+
+}
+
+.confetiPieza{
+
+    position:absolute;
+
+    top:-30px;
+
+    width:12px;
+
+    height:22px;
+
+    opacity:0;
+
+    animation:
+
+        caerConfeti var(--duracion)
+        linear forwards;
+
+}
+
+@keyframes caerConfeti{
+
+    0%{
+
+        transform:
+
+            translate3d(
+                0,
+                -30px,
+                0
+            )
+            rotate(0deg);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:
+
+            translate3d(
+                var(--movimiento),
+                110vh,
+                0
+            )
+            rotate(720deg);
+
+        opacity:1;
+
+    }
+
+}
+
+/*=========================================================
+                    CONFETI
+=========================================================*/
+
+#confeti{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:2000;
+
+}
+
+.confetiPieza{
+
+    position:absolute;
+
+    top:-30px;
+
+    width:12px;
+
+    height:22px;
+
+    opacity:0;
+
+    animation:
+
+        caerConfeti var(--duracion)
+        linear forwards;
+
+}
+
+@keyframes caerConfeti{
+
+    0%{
+
+        transform:
+
+            translate3d(
+                0,
+                -30px,
+                0
+            )
+            rotate(0deg);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:
+
+            translate3d(
+                var(--movimiento),
+                110vh,
+                0
+            )
+            rotate(720deg);
+
+        opacity:1;
+
+    }
+
+}
+
+
+/*=========================================================
+                PANTALLA DE CARGA
+=========================================================*/
+
+#pantallaCarga{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:5000;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:25px;
+
+    background:
+
+        radial-gradient(
+            circle,
+            #5d1590,
+            #210035
+        );
+
+}
+
+.spinner{
+
+    width:75px;
+
+    height:75px;
+
+    border-radius:50%;
+
+    border:
+
+        8px solid #ffffff33;
+
+    border-top-color:
+
+        var(--amarillo);
+
+    border-right-color:
+
+        var(--azul);
+
+    animation:
+
+        girar 1s linear infinite;
+
+}
+
+#pantallaCarga h2{
+
+    font-size:28px;
+
+    color:var(--amarillo);
+
+}
+
+@keyframes girar{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+/*=========================================================
+                OVERLAY
+=========================================================*/
+
+#overlayOscuro{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:3000;
+
+    background:
+
+        rgba(0,0,0,.65);
+
+    backdrop-filter:
+
+        blur(5px);
+
+}
+
+
+/*=========================================================
+                MENSAJE EMERGENTE
+=========================================================*/
+
+#mensajeEmergente{
+
+    position:fixed;
+
+    left:50%;
+
+    bottom:35px;
+
+    transform:
+
+        translateX(-50%);
+
+    z-index:6000;
+
+    min-width:280px;
+
+    max-width:80vw;
+
+    padding:
+
+        16px 28px;
+
+    border-radius:16px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #e9f3ff
+        );
+
+    color:#153b6e;
+
+    border:
+
+        3px solid var(--amarillo);
+
+    box-shadow:
+
+        0 8px 25px #00000077,
+
+        0 0 20px #ffd63366;
+
+    font-size:17px;
+
+    font-weight:800;
+
+    text-align:center;
+
+    animation:
+
+        mensajeEntrada .3s ease;
+
+}
+
+@keyframes mensajeEntrada{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+            translate(-50%,20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+            translate(-50%,0);
+
+    }
+
+}
+
+
+/*=========================================================
+            CONFIGURACIÓN
+=========================================================*/
+
+.opcion{
+
+    width:min(500px,90%);
+
+    margin:20px auto;
+
+    padding:
+
+        18px 25px;
+
+    border-radius:16px;
+
+    background:#ffffff12;
+
+    border:
+
+        2px solid #ffffff33;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.opcion label{
+
+    font-size:20px;
+
+    font-weight:700;
+
+}
+
+
+/*=========================================================
+                INTERRUPTORES
+=========================================================*/
+
+.opcion input[type="checkbox"]{
+
+    appearance:none;
+
+    width:58px;
+
+    height:30px;
+
+    border-radius:30px;
+
+    background:#555;
+
+    position:relative;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.opcion input[type="checkbox"]::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:24px;
+
+    height:24px;
+
+    border-radius:50%;
+
+    background:white;
+
+    top:3px;
+
+    left:3px;
+
+    transition:.3s;
+
+    box-shadow:
+
+        0 2px 5px #00000055;
+
+}
+
+.opcion input[type="checkbox"]:checked{
+
+    background:
+
+        var(--verde);
+
+}
+
+.opcion input[type="checkbox"]:checked::before{
+
+    left:31px;
+
+}
+
+
+/*=========================================================
+            EQUIPO ACTIVO
+=========================================================*/
+
+.marcador.activo{
+
+    transform:
+
+        scale(1.04);
+
+    animation:
+
+        pulsoEquipo 1s infinite alternate;
+
+}
+
+.marcador.azul.activo{
+
+    box-shadow:
+
+        0 0 30px #22aaff,
+
+        0 0 60px #22aaff66;
+
+}
+
+.marcador.rojo.activo{
+
+    box-shadow:
+
+        0 0 30px #ff3d4d,
+
+        0 0 60px #ff3d4d66;
+
+}
+
+@keyframes pulsoEquipo{
+
+    from{
+
+        filter:brightness(1);
+
+    }
+
+    to{
+
+        filter:brightness(1.2);
+
+    }
+
+}
+
+
+/*=========================================================
+        TEMPORIZADOR EN ESTADO DE ALERTA
+=========================================================*/
+
+#temporizador.alerta{
+
+    border-color:
+
+        #ffb000;
+
+    color:#a85e00;
+
+    animation:
+
+        pulsoTiempo .7s infinite alternate;
+
+}
+
+#temporizador.critico{
+
+    border-color:
+
+        #ff3030;
+
+    background:
+
+        radial-gradient(
+            circle,
+            #fff,
+            #ffd8d8
+        );
+
+    color:#a00012;
+
+    animation:
+
+        pulsoCritico .35s infinite alternate;
+
+}
+
+@keyframes pulsoTiempo{
+
+    from{
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        transform:scale(1.08);
+
+    }
+
+}
+
+@keyframes pulsoCritico{
+
+    from{
+
+        transform:scale(1);
+
+        box-shadow:
+
+            0 0 15px red;
+
+    }
+
+    to{
+
+        transform:scale(1.12);
+
+        box-shadow:
+
+            0 0 35px red;
+
+    }
+
+}
+
+
+/*=========================================================
+            ESTADOS DE LOS BOTONES
+=========================================================*/
+
+button{
+
+    -webkit-tap-highlight-color:
+
+        transparent;
+
+}
+
+button:focus-visible{
+
+    outline:
+
+        4px solid white;
+
+    outline-offset:
+
+        4px;
+
+}
+
+.respuesta.seleccionada{
+
+    transform:
+
+        scale(.98);
+
+    box-shadow:
+
+        0 0 25px white;
+
+}
+
+
+/*=========================================================
+            EFECTO DE PUNTUACIÓN
+=========================================================*/
+
+.puntosAnimacion{
+
+    position:fixed;
+
+    z-index:4000;
+
+    font-size:55px;
+
+    font-weight:900;
+
+    color:var(--amarillo);
+
+    text-shadow:
+
+        0 3px 0 #8f6100,
+
+        0 0 20px gold;
+
+    pointer-events:none;
+
+    animation:
+
+        subirPuntos 1.2s ease forwards;
+
+}
+
+@keyframes subirPuntos{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+
+            translateY(20px)
+            scale(.6);
+
+    }
+
+    20%{
+
+        opacity:1;
+
+        transform:
+
+            translateY(0)
+            scale(1.1);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+
+            translateY(-90px)
+            scale(1);
+
+    }
+
+}
+
+
+/*=========================================================
+                TABLET
+=========================================================*/
+
+@media(max-width:1100px){
+
+    .marcoExterior{
+
+        height:94vh;
+
+    }
+
+    .panelPrincipal{
+
+        padding:
+
+            45px 35px 25px;
+
+    }
+
+    .marcador{
+
+        min-height:85px;
+
+        padding:
+
+            12px 18px;
+
+    }
+
+    .marcador h3{
+
+        font-size:16px;
+
+    }
+
+    .marcador span{
+
+        font-size:36px;
+
+    }
+
+    .contenedorRespuestas{
+
+        gap:12px;
+
+    }
+
+    .respuesta{
+
+        min-height:65px;
+
+    }
+
+}
+
+
+/*=========================================================
+                TELÉFONO
+=========================================================*/
+
+@media(max-width:700px){
+
+    body{
+
+        overflow:auto;
+
+    }
+
+    .pantalla{
+
+        min-height:100vh;
+
+        height:auto;
+
+        padding:20px;
+
+    }
+
+    /* MENÚ */
+
+    .numero{
+
+        font-size:70px;
+
+    }
+
+    .potro{
+
+        font-size:34px;
+
+    }
+
+    .dijeron{
+
+        font-size:48px;
+
+    }
+
+    .menuPrincipal{
+
+        margin-top:35px;
+
+        width:100%;
+
+        align-items:center;
+
+    }
+
+    .menuPrincipal button{
+
+        width:
+
+            min(320px,90vw);
+
+        font-size:18px;
+
+        padding:15px;
+
+    }
+
+    /* EQUIPOS */
+
+    .contenedorEquipos h2{
+
+        font-size:32px;
+
+        margin-bottom:35px;
+
+    }
+
+    .equipos{
+
+        gap:30px;
+
+    }
+
+    .btnEquipo{
+
+        width:260px;
+
+        height:170px;
+
+        font-size:55px;
+
+    }
+
+    .btnEquipo span{
+
+        font-size:19px;
+
+    }
+
+    /* JUEGO */
+
+    #pantallaJuego{
+
+        padding:8px;
+
+        align-items:flex-start;
+
+    }
+
+    .marcoExterior{
+
+        width:100%;
+
+        height:auto;
+
+        min-height:98vh;
+
+        padding:10px;
+
+        border-radius:25px;
+
+    }
+
+    .panelPrincipal{
+
+        height:auto;
+
+        min-height:calc(98vh - 20px);
+
+        padding:
+
+            55px 12px 20px;
+
+        border-radius:18px;
+
+    }
+
+    .ovaloSuperior{
+
+        width:220px;
+
+        height:60px;
+
+    }
+
+    .ovaloSuperior span{
+
+        font-size:16px;
+
+    }
+
+    .barraSuperior{
+
+        grid-template-columns:
+
+            1fr 75px 1fr;
+
+        gap:7px;
+
+        margin-top:15px;
+
+    }
+
+    .marcador{
+
+        min-height:65px;
+
+        padding:8px;
+
+        border-width:2px;
+
+        border-radius:12px;
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        gap:2px;
+
+    }
+
+    .marcador h3{
+
+        font-size:10px;
+
+    }
+
+    .marcador span{
+
+        font-size:25px;
+
+    }
+
+    #temporizador{
+
+        width:70px;
+
+        height:70px;
+
+        border-width:5px;
+
+        font-size:26px;
+
+    }
+
+    .contenedorPregunta{
+
+        margin-top:18px;
+
+        padding:14px;
+
+        min-height:90px;
+
+    }
+
+    #pregunta{
+
+        font-size:17px;
+
+    }
+
+    .contenedorRespuestas{
+
+        grid-template-columns:1fr;
+
+        gap:9px;
+
+    }
+
+    .respuesta{
+
+        min-height:58px;
+
+        padding:7px 10px;
+
+        border-width:2px;
+
+        border-radius:12px;
+
+    }
+
+    .respuesta .letra{
+
+        width:35px;
+
+        height:35px;
+
+        font-size:16px;
+
+        margin-right:10px;
+
+    }
+
+    .respuesta p{
+
+        font-size:13px;
+
+    }
+
+    .panelErrores{
+
+        gap:12px;
+
+        margin-top:12px;
+
+    }
+
+    .error{
+
+        width:48px;
+
+        height:48px;
+
+        font-size:28px;
+
+        border-width:2px;
+
+    }
+
+    .turnoActual{
+
+        margin-top:8px;
+
+    }
+
+    .turnoActual h3{
+
+        font-size:10px;
+
+    }
+
+    #equipoTurno{
+
+        padding:5px 12px;
+
+        font-size:11px;
+
+    }
+
+    .controlesJuego{
+
+        gap:8px;
+
+        margin-top:10px;
+
+        flex-wrap:wrap;
+
+    }
+
+    .controlesJuego button{
+
+        padding:8px 12px;
+
+        font-size:10px;
+
+    }
+
+    /* POPUPS */
+
+    .contenidoPopup{
+
+        min-height:230px;
+
+        padding:25px;
+
+        border-width:4px;
+
+    }
+
+    .contenidoPopup h1{
+
+        font-size:90px;
+
+    }
+
+    .contenidoPopup h2{
+
+        font-size:22px;
+
+    }
+
+}
+
+
+/*=========================================================
+                TABLET
+=========================================================*/
+
+@media(max-width:1100px){
+
+    .marcoExterior{
+
+        height:94vh;
+
+    }
+
+    .panelPrincipal{
+
+        padding:
+
+            45px 35px 25px;
+
+    }
+
+    .marcador{
+
+        min-height:85px;
+
+        padding:
+
+            12px 18px;
+
+    }
+
+    .marcador h3{
+
+        font-size:16px;
+
+    }
+
+    .marcador span{
+
+        font-size:36px;
+
+    }
+
+    .contenedorRespuestas{
+
+        gap:12px;
+
+    }
+
+    .respuesta{
+
+        min-height:65px;
+
+    }
+
+}
+
+
+/*=========================================================
+                TELÉFONO
+=========================================================*/
+
+@media(max-width:700px){
+
+    body{
+
+        overflow:auto;
+
+    }
+
+    .pantalla{
+
+        min-height:100vh;
+
+        height:auto;
+
+        padding:20px;
+
+    }
+
+    /* MENÚ */
+
+    .numero{
+
+        font-size:70px;
+
+    }
+
+    .potro{
+
+        font-size:34px;
+
+    }
+
+    .dijeron{
+
+        font-size:48px;
+
+    }
+
+    .menuPrincipal{
+
+        margin-top:35px;
+
+        width:100%;
+
+        align-items:center;
+
+    }
+
+    .menuPrincipal button{
+
+        width:
+
+            min(320px,90vw);
+
+        font-size:18px;
+
+        padding:15px;
+
+    }
+
+    /* EQUIPOS */
+
+    .contenedorEquipos h2{
+
+        font-size:32px;
+
+        margin-bottom:35px;
+
+    }
+
+    .equipos{
+
+        gap:30px;
+
+    }
+
+    .btnEquipo{
+
+        width:260px;
+
+        height:170px;
+
+        font-size:55px;
+
+    }
+
+    .btnEquipo span{
+
+        font-size:19px;
+
+    }
+
+    /* JUEGO */
+
+    #pantallaJuego{
+
+        padding:8px;
+
+        align-items:flex-start;
+
+    }
+
+    .marcoExterior{
+
+        width:100%;
+
+        height:auto;
+
+        min-height:98vh;
+
+        padding:10px;
+
+        border-radius:25px;
+
+    }
+
+    .panelPrincipal{
+
+        height:auto;
+
+        min-height:calc(98vh - 20px);
+
+        padding:
+
+            55px 12px 20px;
+
+        border-radius:18px;
+
+    }
+
+    .ovaloSuperior{
+
+        width:220px;
+
+        height:60px;
+
+    }
+
+    .ovaloSuperior span{
+
+        font-size:16px;
+
+    }
+
+    .barraSuperior{
+
+        grid-template-columns:
+
+            1fr 75px 1fr;
+
+        gap:7px;
+
+        margin-top:15px;
+
+    }
+
+    .marcador{
+
+        min-height:65px;
+
+        padding:8px;
+
+        border-width:2px;
+
+        border-radius:12px;
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        gap:2px;
+
+    }
+
+    .marcador h3{
+
+        font-size:10px;
+
+    }
+
+    .marcador span{
+
+        font-size:25px;
+
+    }
+
+    #temporizador{
+
+        width:70px;
+
+        height:70px;
+
+        border-width:5px;
+
+        font-size:26px;
+
+    }
+
+    .contenedorPregunta{
+
+        margin-top:18px;
+
+        padding:14px;
+
+        min-height:90px;
+
+    }
+
+    #pregunta{
+
+        font-size:17px;
+
+    }
+
+    .contenedorRespuestas{
+
+        grid-template-columns:1fr;
+
+        gap:9px;
+
+    }
+
+    .respuesta{
+
+        min-height:58px;
+
+        padding:7px 10px;
+
+        border-width:2px;
+
+        border-radius:12px;
+
+    }
+
+    .respuesta .letra{
+
+        width:35px;
+
+        height:35px;
+
+        font-size:16px;
+
+        margin-right:10px;
+
+    }
+
+    .respuesta p{
+
+        font-size:13px;
+
+    }
+
+    .panelErrores{
+
+        gap:12px;
+
+        margin-top:12px;
+
+    }
+
+    .error{
+
+        width:48px;
+
+        height:48px;
+
+        font-size:28px;
+
+        border-width:2px;
+
+    }
+
+    .turnoActual{
+
+        margin-top:8px;
+
+    }
+
+    .turnoActual h3{
+
+        font-size:10px;
+
+    }
+
+    #equipoTurno{
+
+        padding:5px 12px;
+
+        font-size:11px;
+
+    }
+
+    .controlesJuego{
+
+        gap:8px;
+
+        margin-top:10px;
+
+        flex-wrap:wrap;
+
+    }
+
+    .controlesJuego button{
+
+        padding:8px 12px;
+
+        font-size:10px;
+
+    }
+
+    /* POPUPS */
+
+    .contenidoPopup{
+
+        min-height:230px;
+
+        padding:25px;
+
+        border-width:4px;
+
+    }
+
+    .contenidoPopup h1{
+
+        font-size:90px;
+
+    }
+
+    .contenidoPopup h2{
+
+        font-size:22px;
+
+    }
+
 }
 
 
 
-@media(max-width:500px){
+/*=========================================================
+            TELÉFONOS PEQUEÑOS
+=========================================================*/
 
+@media(max-width:400px){
 
-.menuPrincipal{
+    .numero{
 
-width:90%;
+        font-size:58px;
+
+    }
+
+    .potro{
+
+        font-size:28px;
+
+    }
+
+    .dijeron{
+
+        font-size:40px;
+
+    }
+
+    .menuPrincipal button{
+
+        width:270px;
+
+        font-size:16px;
+
+    }
+
+    .btnEquipo{
+
+        width:230px;
+
+        height:145px;
+
+    }
+
+    .marcador h3{
+
+        font-size:8px;
+
+    }
+
+    .marcador span{
+
+        font-size:22px;
+
+    }
+
+    #temporizador{
+
+        width:62px;
+
+        height:62px;
+
+        font-size:23px;
+
+    }
+
+    #pregunta{
+
+        font-size:15px;
+
+    }
+
+    .respuesta p{
+
+        font-size:12px;
+
+    }
 
 }
-
-
-
-.equipos button{
-
-width:230px;
-
-height:160px;
-
-}
-
-
-
-#pantallaError,
-#pantallaCorrecto{
-
-font-size:8rem;
-
-}
-
-
-
-.ganadorContenido h2{
-
-font-size:2rem;
-
-}
-
-   #confeti span{
-
-animation-name:caer;
-
-animation-fill-mode:forwards;
-
-}
-
-
-
-@keyframes caer{
-
-from{
-
-transform:translateY(0)
-rotate(0deg);
-
-}
-
-
-
-to{
-
-transform:
-translateY(110vh)
-rotate(720deg);
-
-}
-
-}
-
-
-}
-
-
-
