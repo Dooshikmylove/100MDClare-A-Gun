@@ -41,9 +41,6 @@ const pantallaInstrucciones =
 const pantallaConfiguracion =
     document.getElementById("pantallaConfiguracion");
 
-const pantallaCreditos =
-    document.getElementById("pantallaCreditos");
-
 const pantallaEquipos =
     document.getElementById("pantallaEquipos");
 
@@ -63,18 +60,12 @@ const btnInstrucciones =
 const btnConfiguracion =
     document.getElementById("btnConfiguracion");
 
-const btnCreditos =
-    document.getElementById("btnCreditos");
-
 
 const volverInicio1 =
     document.getElementById("volverInicio1");
 
 const volverInicio2 =
     document.getElementById("volverInicio2");
-
-const volverInicio3 =
-    document.getElementById("volverInicio3");
 
 
 const equipoAzul =
@@ -254,13 +245,6 @@ btnConfiguracion.addEventListener("click", () => {
 });
 
 
-btnCreditos.addEventListener("click", () => {
-
-    mostrarPantalla(pantallaCreditos);
-
-});
-
-
 volverInicio1.addEventListener("click", () => {
 
     mostrarPantalla(pantallaInicio);
@@ -269,13 +253,6 @@ volverInicio1.addEventListener("click", () => {
 
 
 volverInicio2.addEventListener("click", () => {
-
-    mostrarPantalla(pantallaInicio);
-
-});
-
-
-volverInicio3.addEventListener("click", () => {
 
     mostrarPantalla(pantallaInicio);
 
@@ -1281,23 +1258,17 @@ function obtenerColorConfeti() {
    REINICIAR
 ========================================================= */
 
-btnReiniciar.addEventListener(
-    "click",
-    () => {
+btnReiniciar.addEventListener("click", () => {
 
-        detenerTemporizador();
+    detenerTemporizador();
 
-        juegoActivo = false;
+    juegoActivo = false;
 
-        confeti.innerHTML = "";
+    confeti.innerHTML = "";
 
-        mostrarPantalla(
-            pantallaInicio
-        );
+    mostrarPantalla(pantallaInicio);
 
-    }
-);
-
+});
 
 /* =========================================================
    INICIALIZACIÓN
