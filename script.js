@@ -226,6 +226,10 @@ function iniciarMusica() {
 
 btnJugar.addEventListener("click", () => {
 
+    musicaFondo.pause();
+
+    musicaFondo.currentTime = 0;
+
     mostrarPantalla(pantallaEquipos);
 
 });
@@ -323,7 +327,6 @@ function iniciarPartida(equipo) {
     preguntaActual = 0;
 
     puntos.azul = 0;
-
     puntos.rojo = 0;
 
     equipoActual = equipo;
@@ -337,8 +340,6 @@ function iniciarPartida(equipo) {
     actualizarMarcadores();
 
     mostrarPantalla(pantallaJuego);
-
-    iniciarMusica();
 
     cargarPregunta();
 
@@ -1109,52 +1110,42 @@ function finalizarJuego() {
 
     detenerTemporizador();
 
+    musicaFondo.pause();
+
+    musicaFondo.currentTime = 0;
+
     juegoActivo = false;
 
 
     let ganador;
 
 
-    if (
-        puntos.azul >
-        puntos.rojo
-    ) {
+    if (puntos.azul > puntos.rojo) {
 
-        ganador =
-            "EQUIPO AZUL";
+        ganador = "EQUIPO AZUL";
 
     }
 
-    else if (
-        puntos.rojo >
-        puntos.azul
-    ) {
+    else if (puntos.rojo > puntos.azul) {
 
-        ganador =
-            "EQUIPO ROJO";
+        ganador = "EQUIPO ROJO";
 
     }
 
     else {
 
-        ganador =
-            "¡EMPATE!";
+        ganador = "¡EMPATE!";
 
     }
 
 
-    textoGanador.textContent =
-        ganador;
+    textoGanador.textContent = ganador;
 
 
-    mostrarPantalla(
-        pantallaGanador
-    );
+    mostrarPantalla(pantallaGanador);
 
 
-    reproducirSonido(
-        audioVictoria
-    );
+    reproducirSonido(audioVictoria);
 
 
     lanzarConfeti();
@@ -1267,6 +1258,8 @@ btnReiniciar.addEventListener("click", () => {
     confeti.innerHTML = "";
 
     mostrarPantalla(pantallaInicio);
+
+    iniciarMusica();
 
 });
 
