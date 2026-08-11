@@ -615,15 +615,21 @@ animation:flotar 6s infinite;
             #190027
         );
 
-    padding:25px;
-
     display:flex;
 
     justify-content:center;
 
-    align-items:center;
+    align-items:flex-start;
 
-    overflow:auto;
+    padding:25px;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    height:100vh;
+
+    box-sizing:border-box;
 
 }
 
@@ -633,7 +639,9 @@ animation:flotar 6s infinite;
 
     width:min(1450px,96vw);
 
-    height:min(920px,94vh);
+min-height:920px;
+height:auto;
+    flex-shrink:0;
 
     padding:28px;
 
@@ -654,7 +662,6 @@ animation:flotar 6s infinite;
     overflow:visible;
 
 }
-
 
 
 /*=========================================================*
@@ -3481,5 +3488,36 @@ button:focus-visible{
         font-size:12px;
 
     }
+
+
+        /* Barra de desplazamiento */
+
+#pantallaJuego::-webkit-scrollbar{
+
+    width:12px;
+
+}
+
+#pantallaJuego::-webkit-scrollbar-track{
+
+    background:#1b0432;
+
+}
+
+#pantallaJuego::-webkit-scrollbar-thumb{
+
+    background:#ffd633;
+
+    border-radius:20px;
+
+    border:2px solid #1b0432;
+
+}
+
+#pantallaJuego::-webkit-scrollbar-thumb:hover{
+
+    background:#ffbf00;
+
+}
 
 }
