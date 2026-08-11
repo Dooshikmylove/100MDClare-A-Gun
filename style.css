@@ -602,14 +602,13 @@ animation:flotar 6s infinite;
 }
 
 
-/*=========================================================
-                MARCO DEL TABLERO
-=========================================================*/
+/*=========================================================*
+* MARCO DEL TABLERO
+*=========================================================*/
 
 #pantallaJuego{
 
     background:
-
         radial-gradient(
             circle,
             #40106b,
@@ -617,6 +616,14 @@ animation:flotar 6s infinite;
         );
 
     padding:25px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:auto;
 
 }
 
@@ -628,12 +635,11 @@ animation:flotar 6s infinite;
 
     height:min(920px,94vh);
 
-    padding:18px;
+    padding:28px;
 
     border-radius:45px;
 
     background:
-
         linear-gradient(
             135deg,
             #ffd633,
@@ -642,18 +648,18 @@ animation:flotar 6s infinite;
         );
 
     box-shadow:
-
         0 0 35px #ffd63388,
-
         inset 0 0 15px white;
+
+    overflow:visible;
 
 }
 
 
 
-/*=========================================================
-                FOCOS DECORATIVOS
-=========================================================*/
+/*=========================================================*
+* FOCOS DECORATIVOS
+*=========================================================*/
 
 .marcoExterior::before{
 
@@ -661,24 +667,25 @@ animation:flotar 6s infinite;
 
     position:absolute;
 
-    inset:7px;
+    inset:10px;
 
     border-radius:38px;
 
     pointer-events:none;
 
     background:
-
         radial-gradient(
             circle,
-            white 0 4px,
-            #ffd633 5px 9px,
-            transparent 10px
+            #ffffff 0 5px,
+            #ffe86a 6px 10px,
+            transparent 11px
         );
 
-    background-size:42px 42px;
+    background-size:34px 34px;
 
-    opacity:.95;
+    background-position:center;
+
+    opacity:1;
 
     z-index:0;
 
@@ -695,15 +702,13 @@ animation:flotar 6s infinite;
     border-radius:45px;
 
     box-shadow:
-
-        inset 0 0 35px #ffffff55;
+        inset 0 0 40px rgba(255,255,255,.45);
 
     pointer-events:none;
 
     z-index:0;
 
 }
-
 
 /*=========================================================
                 PANEL PRINCIPAL
